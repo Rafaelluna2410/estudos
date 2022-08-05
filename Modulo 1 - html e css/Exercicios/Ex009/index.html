@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de listas</title>
+</head>
+<body>
+    <h1>Tipos de listas: </h1>
+    <h2>Listas ordenadas</h2>
+    Para criar uma lista <strong>ordenada</strong> utilizo a tag "ol" <br>
+    Exemplo: <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+             </ol>
+    <p>Também posso modificar o marcador para letras ou números romanos, o padrão são números</p>
+    Exemplo: <ol type="a">
+        <li>item a</li>
+        <li>item b</li>
+        <li>item c</li>
+    </ol>
+    <h3>observação:</h3>
+    quando a lista for ordenada baseada em letras, mas sendo necessário começar por determinada letras
+    deve colocar o numero dessa letra para o poder o parâmetro start entender. <br>
+    Exemplo:  <ol type="A" start="3"> 
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+
+    <h2>Listas desordenadas</h2>
+    Para uma lista <strong>Desordenada</strong> utilizo a tag "ul" <br>
+    Exemplo: <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+
+    </ul>
+    <p>Também posso modificar o marcador para quadrado ou circulo, o padrão é uma bola</p>
+    Exemplo: <ul type="square">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+
+    </ul>
+        
+     <h2>Listas misturadas</h2>
+     Posso misturar as tags e criar uma lista mista <br>
+     Exemplo:   <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li> 
+                <ul>
+            <li>item alternativo</li>
+            <li>item alternativo</li>
+                </ul>
+            </li>
+
+            <li>
+                <ol>
+            <li>item a</li>
+            <li>item b</li>
+                </ol>
+            </li>
+     </ol>
+     Exemplo com comidas: 
+    <ul>
+        <li>café da manhã
+         <ol>
+            <li>pão</li>
+            <ul> 
+                <li>com queijo</li>
+                <li>com ovo</li>
+            </ul>
+            <li>café</li>
+            <ul>
+                <li>com leite</li>
+                <li>puro</li>
+        </ul>
+    </ol>
+        </li>
+        <li>almoço 
+    <ol>
+              <li>lasanha</li>
+            <ul>
+                <li>queijo e presunto</li>
+                <li>ou com carne</li>
+            </ul>
+        <li>galeto</li>
+              <ul>
+        <li>completo</li>
+        <li>bem assado</li>
+            </ul>
+    </ol>
+
+         </li>
+    </ul>
+<h2>Listas de definições</h2>
+    <dl>
+        <dt>Html</dt>
+        <dd>Linguagem de maracação para criação de um site</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para criação do desginer de um site</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para criar a interação do site</dd>
+    </dl>
+</body>
+</html>
