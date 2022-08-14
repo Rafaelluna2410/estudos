@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* HTML --> ID equivale a "#" no no CSS  (só pode um por documento html, pode ser usado em outro html sem problemas)
+   HTML --> Class equivale a "." no CSS  (pode mais de um por documento html)
+*/
+
+body{
+    margin: auto;
+    background-color: rgba(100, 100, 100);
+    width: 600px;
+    }
+
+h1#principal{
+    text-align: center;
+    }
+
+
+.basico{
+    background-color: green;
+    color:greenyellow;
+    }
+
+.intermediario{
+    background-color: rgba(200, 0, 0, 0.200);
+    color: red
+    }
+
+.avancado{
+    background-color: rgba(0, 0, 200, 0.200);
+    color: blue;
+
+    }
