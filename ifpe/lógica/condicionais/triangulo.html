@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var primeiroLado, segundoLado, terceiroLado;
+        primeiroLado = parseFloat(prompt("Digite o valor do primeiro lado"));
+        segundoLado = parseFloat(prompt("Digite o valor do segundo lado"));
+        terceiroLado = parseFloat(prompt("Digite o valor do terceiro lado"))
+        if (primeiroLado == segundoLado) {
+            if (primeiroLado != terceiroLado) {
+                document.write("Esse triângulo é retângulo")
+            }
+
+        } else if (primeiroLado == terceiroLado) {
+            document.write("Esse triangulo é retângulo")
+
+        } else {
+            document.write("Esse triângulo não é retângulo")
+        }
+
+    </script>
+
+</body>
+
+</html>

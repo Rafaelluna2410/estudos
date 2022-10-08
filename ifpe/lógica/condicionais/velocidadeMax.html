@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var velCarro, calculo;
+        var velMax = 50
+        velCarro = parseInt(prompt("Digite a sua velocidade em km/h"))
+        calculo = velCarro - velMax
+        if (calculo >= 1) {
+            if (calculo <= 10) {
+                document.write("você vai pagar 50 reais de multa")
+            }
+        }
+        if (calculo > 10) {
+            if (calculo <= 30) {
+                document.write("você vai pagar 100 reais de multa")
+            }
+        }
+        if (calculo >= 31) {
+            document.write("você vai pagar 200 reaus de multa")
+        }
+        if (calculo <= 0) {
+            document.write("você não vai receber multa")
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
