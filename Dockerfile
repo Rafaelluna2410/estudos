@@ -1,3 +1,0 @@
-FROM ubuntu
-
-EXPOSE 80
