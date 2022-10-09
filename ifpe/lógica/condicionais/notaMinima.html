@@ -18,7 +18,7 @@
         terceiraNota = parseFloat(prompt("Digite a terceira nota"));
         media = (primeiraNota + segundaNota + terceiraNota) / 3;
         if (media < 7) {
-            notaFinal = (media * 6 - 50) * -1 / 4
+            notaFinal = (50 - media * 6) / 4
             document.write("você vai precisar tirar: " + notaFinal)
         } else {
             document.write("você já passou por média")
