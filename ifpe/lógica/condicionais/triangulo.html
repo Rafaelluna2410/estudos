@@ -13,22 +13,15 @@
 
     <script>
 
-        var primeiroLado, segundoLado, terceiroLado;
-        primeiroLado = parseFloat(prompt("Digite o valor do primeiro lado"));
-        segundoLado = parseFloat(prompt("Digite o valor do segundo lado"));
-        terceiroLado = parseFloat(prompt("Digite o valor do terceiro lado"))
-        if (primeiroLado == segundoLado) {
-            if (primeiroLado != terceiroLado) {
-                document.write("Esse triângulo é retângulo")
-            }
-
-        } else if (primeiroLado == terceiroLado) {
-            document.write("Esse triangulo é retângulo")
-
+        var hipotenusa, altura, base;
+        hipotenusa = parseFloat(prompt("Digite o valor da hipotenusa"))
+        altura = parseFloat(prompt("Digite o valor da altura do triângulo"))
+        base = parseFloat(prompt("Digite o valor da base do triângulo"))
+        if (hipotenusa ** 2 == altura ** 2 + base ** 2) {
+            document.write("É um triângulo do tipo retângulo")
         } else {
-            document.write("Esse triângulo não é retângulo")
+            document.write("Não é um triânuglo do tipo retângulo")
         }
-
     </script>
 
 </body>

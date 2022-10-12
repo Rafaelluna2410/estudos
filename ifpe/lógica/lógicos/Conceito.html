@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var primeiraNota, segundaNota, media;
+        primeiraNota = parseFloat(prompt("digite sua primeira nota"))
+        segundaNota = parseFloat(prompt("Digite sua segunda nota"))
+        media = (primeiraNota + segundaNota)/2
+        if(media >= 9 && media <=10){
+                document.write("Conceito: A")
+        }
+        if(media >= 7 && media <= 8.9){
+                document.write("Conceito: B")
+        }
+        if(media >= 5 && media <= 6.9){
+                document.write("Conceito: C")
+        }
+        if(media < 5) {
+                document.write("O conceito: D")
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

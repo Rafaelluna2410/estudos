@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var valor, desconto, valorFinal, caso;
+        valor = parseFloat(prompt("Digite o valor das compras em reais"));
+        if (valor <= 150) {
+            caso = 1
+        }
+        if (valor > 150 && valor <= 250) {
+            caso = 2
+        }
+        if (valor > 250 && valor <= 350) {
+            caso = 3
+        } else {
+            caso = 4
+        }
+        switch (caso) {
+            case 1:
+                desconto = valor * 0.03
+                valorFinal = valor - desconto
+                document.write(" valor da compra: " + valor)
+                document.write(" valor do desconto: " + desconto);
+                document.write(" valor final: " + valorFinal)
+                break;
+            case 2:
+                desconto = valor * 0.05
+                valorFinal = valor - desconto
+                document.write("valor da compra: " + valor)
+                document.write(" valor do desconto: " + desconto)
+                document.write(" valor final: " + valorFinal)
+            case 3:
+                desconto = valor * 0.10
+                valorFinal = valor - desconto
+                document.write("valor da compra: " + valor)
+                document.write(" valor do desconto: " + desconto)
+                document.write(" valor final: " + valorFinal)
+            case 4:
+                desconto = valor * 0.15
+                valorFinal = valor - desconto
+                document.write("valor da compra: " + valor)
+                document.write(" valor do desconto: " + desconto)
+                document.write(" valor final: " + valorFinal)
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<script>
+
+    var bruto, liquido
+    bruto = parseFloat(prompt("Digite o seu salário"))
+    if (bruto <= 1212) {
+        document.write("seu salário líquido é: " + bruto)
+    }
+    else if (bruto > 1212 && bruto <= 1700) {
+        liquido = bruto - (bruto * 0.05)
+        document.write("Seu salário líquido é: " + liquido)
+    }
+    else if (bruto > 1700 && bruto <= 3500) {
+        liquido = bruto - (bruto * 0.10)
+        document.write("Seu salário é: " + liquido)
+    }
+    else if (bruto > 3500) {
+        liquido = bruto - (bruto * 0.20)
+        document.write("Seu salário líquido é: " + liquido)
+    }
+</script>

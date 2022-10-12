@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var vendas, salario
+
+        vendas = parseInt(prompt("Digite quantos pneus você vendeu"));
+        salario = parseFloat(prompt("Digite o seu salário"));
+        if (vendas <= 15) {
+            document.write("seu salário com o bonus de vendas é: " + (salario * 0.06 + salario));
+        }
+        if (vendas >= 16 && vendas <= 25) {
+            document.write("seu salário com o bonus de vendas é: " + (salario * 0.09 + salario));
+        }
+        if (vendas >= 26 && vendas <= 45) {
+            document.write("seu salário com o bonus de vendas é: " + (salario * 0.15 + salario));
+        }
+        if (vendas > 45) {
+            document.write("seu salário com o bonus de vendas é: " + (salario * 0.2 + 300 + salario));
+        }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

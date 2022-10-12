@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var combustivel, litros, bruto, desconto;
+        combustivel = parseInt(prompt("Digite 1 para gasolina ou 2 para alcool"));
+
+        switch (combustivel) {
+            case 1:
+                litros = parseInt(prompt("Digite a quantidade do combustivel em litros"));
+
+                if (litros <= 20) {
+                    bruto = combustivel * 4.75
+                    desconto = bruto - (bruto * 0.03)
+                    document.write("valor total a ser pago: " + desconto)
+                } else {
+                    bruto = comsutivel * 4.75
+                    desconto = bruto - (bruto * 0.05)
+                    document.write("valor total a ser pago: " + desconto)
+                }
+                break;
+            case 2:
+                litros = parseInt(prompt("Digite a quantidade do combustivel em litros"));
+
+                if (combustivel <= 20) {
+                    bruto = combustivel * 5.45
+                    desconto = bruto - (bruto * 0.04)
+                    document.write("valor total a ser pago: " + desconto)
+                } else {
+                    bruto = combustivel * 5.45
+                    desconto = bruto - (bruto * 0.06)
+                    document.write("valor total a ser pago é: " + desconto)
+                }
+                break;
+            default: document.write("insira um valor válido")
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<script>
+
+    var altura, peso, imc, baixo, medio;
+    peso = parseFloat(prompt("Digite o seu peso em quilogramas"))
+    altura = parseFloat(prompt("Digite sua altura em centímetros"))
+    imc = peso / (altura / 100) ** 2
+    if (imc < 18.5) {
+        document.write("Você está abaixo do peso ideal")
+    } else if (imc >= 18.5 && imc <= 24.9) {
+        document.write("Você está com o peso normal")
+    } else if (imc >= 25 && imc <= 29.9) {
+        document.write("você está com excesso de peso")
+    } else if (imc >= 30) {
+        document.write("você está acima do peso")
+    }
+
+</script>
