@@ -1,2 +1,2 @@
 # Estudos
-Neste repositório apresento um pouco dos trabalhos que realizo durante meus estudos ou na minha vida profissional.
+Esses são algumas ferramentas que utilizei durante minha vida profissional ou para estudos
