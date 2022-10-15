@@ -1,0 +1,23 @@
+<script>
+
+    var n1, n2, action, calculo
+
+    n1 = parseFloat(prompt("digite o primeiro valor"));
+    n2 = parseFloat(prompt("digite o segundo valor"));
+    action = parseInt(prompt("digite: 1-somar || 2-subtrair || 3-multiplicar || 4-dividir"))
+
+    if (action == 1) {
+        calculo = n1 + n2
+        document.write("o resultado é: " + calculo);
+    } else if (action == 2) {
+        calculo = n1 - n2
+        document.write("o resultado é: " + calculo);
+    } else if (action == 3) {
+        calculo = n1 * n2
+        document.write("o resultado é: " + calculo);
+    } else if (action == 4) {
+        calculo = n1 / n2
+        document.write("o resultado é: " + calculo);
+    }
+
+</script>

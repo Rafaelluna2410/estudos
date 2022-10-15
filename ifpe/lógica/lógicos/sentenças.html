@@ -1,12 +1,72 @@
-<script>
+var a = false, b = true, c = true, d = false, e = false, f = false, g = true;
+
+primeira sentença:
+
+( a && b ) || (!d || !f) = true
+(pelo menos um true o valor é true)
 
 
-var 
+(a && b) = false
+false e true = false (pelo menos um false o resultado é false)
+
+(!d || !f) = true (o valor é invertido quando há !)
+true ou true = true (pelo menos um true o valor é true)
+
+
+
+segunda sentença:
+
+a && !b && c && !d && e && !f = false
+
+como "a" é false os demais seram false, porque é um curto-circuito
+
+
+
+
+terceira sentença:
+
+(!(a && b) || (!c || !d)) = true || true = true
+
+(!(a && b)) = (!(false)) = true
+
+(!c || !d) = (false || true) = true
+vale lembrar que antes c = true e d = false, por isso interveu os valores
 
 
 
 
 
+quarta sentença:
+
+!a || a && (b || c) && d || e && f = true
+
+1. primeiro resolvi o paresentes seguindo a mesma lógica da matemática:
+(b || c ) = true (lembrando que b = true e c = true, por isso resultou true)
+
+2. a sentença após a resolução anterior ficou:
+!a || a && true && d || e && f
+
+3. depois resolvi a primeira multiplicação, no caso a && true:
+a && true = false (lembrando que a = false, portanto, false e true = false)
+
+4. a sentença ficou: !a || false || e && f
+note que ja resolvi o false && d e deixei esses && false
+
+5. e && f = false (e = false e f= false, então, resultado é false)
+
+6.a sentença ficou: !a || false || false    resultado = true
+a = false, mas ! mudou o valor e ficou true, assim, o primeiro valor sendo true com uma sequência de "||" o valor é true
+nesse caso ja poderia ter fieto o !a, porque se e && f fosse true o resultado seria igual.
 
 
-</script>
+
+quinta sentença:
+
+a || !b || !c || !d || !e && f   =true
+
+1. resolvi primeiro a multiplicação
+!e && f = false
+"e" ficou true e f manteve-se false, por isso, resultado é false dessa parte da sentença
+
+2.a sentença ficou true, porque !d foi modificado para true, então, true || false = true.
+a = false || !b = false || !c - false || !d = true || false 

@@ -1,0 +1,26 @@
+<script>
+
+    var hEntrada, mEntrada, hSaida, mSaida, valor, hora, minuto;
+
+    hEntrada = parseInt(prompt("Digite a hora de entrada"));
+    mEntrada = parseInt(prompt("Digite o minuto da entrada"));
+    hSaida = parseInt(prompt("Digite a hora que você saiu"));
+    mSaida = parseInt(prompt("Digite o minuto que você saiu"));
+    minuto = mSaida - mEntrada
+    hora = hSaida - mEntrada
+
+    if (hora == 0 && minuto > 0) {
+        document.write("o valor cobrado é 4 reais")
+    } else if (hora == 1 && minuto == 0) {
+        document.write("o valor cobrado é 4 reais")
+    } else if (hora > 2 && minuto > 0) {
+        document.write("o valor cobrado é: " + (hora + 5) + "reais")
+    } else if (hora > 2 && minuto == 0) {
+        document.write("o valor cobrado é: " + (hora + 4) + "reais")
+    } else if (hora == 2 && minuto == 0) {
+        document.write("o valor cobrado é 6 reais")
+    } else if (hora == 1 && minuto > 0) {
+        document.write("o valor cobrado é 6 reais")
+    }
+
+</script>
