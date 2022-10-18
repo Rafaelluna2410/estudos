@@ -154,9 +154,9 @@ e criei um arquivo example.com.conf contendo as seguintes config:
 
 Utilizei o diretório conf.d, porque está mapeado pelo arquivo nginx.conf como diretório válido para config de web server.
 
-Por fim, basta start o nginx com systemctl start nginx e depois abrir o navegador e colocar o ip e porta da página.
+Por fim, basta startar o nginx com systemctl start nginx e depois abrir o navegador e colocar o ip e porta da página.
 
-Abaixo deixo alguma referências:
+Abaixo, deixo algumas referências:
 * keepalived:
 https://docs.oracle.com/cd/E37670_01/E41138/html/section_wkd_ys2_4r.html
 https://www.pentestpartners.com/security-blog/how-to-use-keepalived-for-high-availability-and-load-balancing/
