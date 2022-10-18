@@ -1,0 +1,166 @@
+Estrutura: 
+* 2 vms com nginx e keepalived instalados
+* versão do kernel >= 5.15.27
+* rede 192.168.100.1/24
+* máquina master: .100.77 e máquina backup: 100.78
+* Ambos nginx como servidor web
+* keepalived como vrrp criando ip 192.168.100.80 escutando na porta 80
+* 2 páginas web escutando na porta 6060 e 7070
+
+
+
+Para o keepalived da máquina master:
+
+1. Criei o arquivo keepalived.conf dentro de /etc/keepalived/
+
+2. Apliquei a permissão 644 para o arquivo keepalived.conf
+
+Apliquei as seguintes config nesse arquivo:
+
+
+
+vrrp_instance keep1 {
+
+        state MASTER      //keepalived principal
+        interface eth0    // ether que uso para rede
+        virtual_router_id 51      //referência do v
+        priority 101        //quanto maior o valor há maior preferência para deixar online
+        advert_int 2    
+
+        authentication {        //autenticação para grupos, todos devem ter as mesmas regras.
+                auth_type PASS    
+                auth_pass 1234
+        }
+
+        virtual_ipaddress {    //ip que o keepalived cria após ser ativado
+                192.168.100.80
+        }
+}
+
+virtual_server 192.168.100.80 80 {  porta para o virtual server
+
+        delay_loop 5 //tempo de verificação dos servers
+        protocol TCP   //protocolo de operação
+        lb_algo rr  //forma de balanceamento
+        lb_kind DR    //tipo de balanceador (direct routing nesse exemplo)
+        persistence_timeout 7200 
+        
+       real_server 192.168.100.77 80 {
+                weight 1  //importância desse servidor para enviar conexões 
+                TCP_CHECK {  
+                        connect_timeout 5 //tempo para declarar falha no host
+                        connect_port 80 //porta para teste
+                }
+        }
+
+        real_server 192.168.100.78 80 { //mesma config para outro servidor
+        weight 1
+        TCP_CHECK {
+                connect_timeout 5
+                connect_port 80
+                }
+        }
+}
+
+
+
+
+Para o keepalived da máquina backup:
+
+1. modifico apenas duas partes da conf:
+    1.1 state MASTER -----> state BACKUP
+    1.2 priority 101 -----> priority 80
+
+
+vrrp_instance keep1 {
+
+        state BACKUP      //keepalived principal
+        interface eth0    // ether que uso para rede
+        virtual_router_id 51      //referência do v
+        priority 80        //quanto maior o valor há maior preferência para deixar online
+        advert_int 2    
+
+        authentication {        //autenticação para grupos, todos devem ter as mesmas regras.
+                auth_type PASS    
+                auth_pass 1234
+        }
+
+        virtual_ipaddress {    //ip que o keepalived cria após ser ativado
+                192.168.100.80
+        }
+}
+
+virtual_server 192.168.100.80 80 {ip + porta para o virtual server
+
+        delay_loop 5 //tempo de verificação dos servers
+        protocol TCP   //protocolo de operação
+        lb_algo rr  //forma de balanceamento
+        lb_kind DR    //tipo de balanceador (direct routing nesse exemplo)
+        persistence_timeout 7200 
+        
+       real_server 192.168.100.77 80 {
+                weight 1  //importância desse servidor para enviar conexões 
+                TCP_CHECK {  
+                        connect_timeout 5 //tempo para declarar falha no host
+                        connect_port 80 //porta para teste
+                }
+        }
+
+        real_server 192.168.100.78 80 { //mesma config para outro servidor
+        weight 1
+        TCP_CHECK {
+                connect_timeout 5
+                connect_port 80
+                }
+        }
+}
+
+
+Pode confirmar se o ip virtual foi ativado com ip address. Na ether que foi configurada deve ter o ip da máquina mais o ip virtual criado pelo keepalived
+
+Após isso só startar o keepalived com systemctl start keepalived, caso não utilize systemd escreva service keepalived start.
+
+
+
+Para o Nginx:
+
+1. Criei dois arquivos index.html em dois diretórios diferentes.
+
+    o primeiro: /var/www/example.com
+    o segundo: /var/www/example.net
+
+2. Mantive usuário e grupo root para os diretórios e index.html
+
+
+3. Utilizei o arquivo conf.d encontra em /etc/nginx/
+e criei um arquivo example.com.conf contendo as seguintes config: 
+
+    server {  
+        listen 192.168.100.80:7070; //ip + porta da página web example.com
+        index index.html index.htm index.php;
+        server_name example.com; //nome do server
+        root    /var/www/example.com; //caminho para o arquivo
+
+    }
+
+    server{ //mesma config, mas para a página example.net
+        listen 192.168.100.80:6060; //Note que mudei apenas a porta para acesso a outra página
+        index index.html index.htm index.php;
+        server_name example.net;
+        root    /var/www/example.net;
+
+    }
+
+
+Utilizei o diretório conf.d, porque está mapeado pelo arquivo nginx.conf como diretório válido para config de web server.
+
+Por fim, basta start o nginx com systemctl start nginx e depois abrir o navegador e colocar o ip e porta da página.
+
+Abaixo deixo alguma referências:
+* keepalived:
+https://docs.oracle.com/cd/E37670_01/E41138/html/section_wkd_ys2_4r.html
+https://www.pentestpartners.com/security-blog/how-to-use-keepalived-for-high-availability-and-load-balancing/
+* kernel:
+https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15.72/
+* nginx:
+https://docs.nginx.com/nginx/admin-guide/web-server/web-server/#virtual-server
