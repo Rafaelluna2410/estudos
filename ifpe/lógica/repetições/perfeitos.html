@@ -1,8 +1,6 @@
 <script>
 
-
-
-var n, soma=0;
+var n, soma=0; verdadeiro =true
 
 n = parseInt(prompt("digite o valor"))
 
@@ -12,16 +10,12 @@ for (i = 0; i <n; i++){
     if(n % i==0 ){
 
         soma = soma + i
-document.write("teste " + soma +"<br>")
+
     }
 
-    if (soma ==n){
-            document.write("é perfeito")
     }
-
-
-}
-
-
+if (soma ==n){
+            document.write("n é perfeito")
+    }else(document.write("n não é perfeito"))
 
 </script>

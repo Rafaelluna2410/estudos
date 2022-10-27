@@ -1,0 +1,34 @@
+
+
+<script>
+    var jogador, palitinhosJogador, palitinhosComputador, computador, soma, vitoriasJogador = 0, vitoriasComputador = 0;
+    while (true) {
+        palitinhosJogador = parseInt(prompt("Quantos palitinhos voce vai jogar?"));
+        jogador = parseInt(prompt("Qual a soma dos palitinhos?"));
+        palitinhosComputador = Math.floor(Math.random() * 4);
+        computador = Math.floor(Math.random() * (6 - palitinhosComputador + 1)) + palitinhosComputador;
+        soma = palitinhosJogador + palitinhosComputador;
+        if (soma == jogador && soma != computador) {
+            document.write("Jogador ganhou! A soma era " + soma + "<br>");
+            vitoriasJogador++;
+        } else if (soma == computador && soma != jogador) {
+            document.write("O computador ganhou! A soma era " + soma + "<br>");
+            vitoriasComputador++;
+        } else if (soma == computador && soma == jogador) {
+            document.write("Deu empate! A soma era " + soma + "<br>");
+        } else {
+            document.write("Nenhum dois ganhou! A soma era " + soma + "<br>");
+        }
+        document.write("O computador disse que a soma era " + computador + "<br>");
+        document.write("PJ: " + palitinhosJogador + " PC: " + palitinhosComputador + "<br>");
+        if (vitoriasJogador == 2) {
+            document.write("O jogador ganhou duas vezes!");
+            break;
+        }
+        if (vitoriasComputador == 2) {
+            document.write("O computador ganhou duas vezes!");
+            break;
+        }
+    }
+</script>
+

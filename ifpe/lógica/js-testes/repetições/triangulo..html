@@ -1,0 +1,29 @@
+<script>
+
+//task 1043 beecrowd 
+    var ladoA, ladoB, ladoC, area, perim;
+
+
+    ladoA = parseInt(prompt("Digite o lado A"));
+    ladoB = parseInt(prompt("Digite o lado B"));
+    ladoC = parseInt(prompt("Digite o lado C"));
+
+
+
+    if (ladoA + ladoB == ladoC || ladoA + ladoC == ladoB) {
+
+        perim = ladoA + ladoB + ladoC
+        document.write("Os lados formam um triângulo com perimetro: " + perim);
+
+    } else if (ladoB + ladoC == ladoA) {
+        perim = ladoA + ladoB + ladoC
+
+        document.write("Os lados formam um triângulo com perimetro: " + perim);
+    } else {
+
+        area = ((ladoA + ladoB) * ladoC) / 2
+
+        document.write("A área do trapézio é: " + area)
+    }
+
+</script>

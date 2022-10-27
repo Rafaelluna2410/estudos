@@ -1,0 +1,37 @@
+<script>
+
+var winJogador=0, winCpu=0, empate=0,cpu, jogador;
+while(true){
+
+jogador = parseInt(prompt("Digite: 1-pedra, 2-papel ou 3-tesoura"));
+cpu = Math.floor(Math.random() * (3)) + 1
+
+
+if(jogador==cpu){
+    empate+=1
+  
+}else if(jogador==1 && cpu== 3){
+winJogador++
+
+}else if(cpu ==1 && jogador==3){
+    winCpu++
+}else if(jogador==2 && cpu== 1){
+    winCpu++
+}else if(jogador==1 && cpu==2){
+    winJogador++
+}else if(jogador==3 && cpu==2){
+        winJogador++
+}else if(jogador==2 && cpu==3){
+        winCpu++
+}
+
+if(winJogador==2){
+    document.write("o jogador ganhou")
+    break;
+}else if(winCpu==2){
+        document.write("A cpu ganhou")
+        break;
+}
+}
+
+</script>
