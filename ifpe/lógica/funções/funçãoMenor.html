@@ -1,0 +1,24 @@
+<script>
+
+
+function menor(valor){
+
+    var teste = valor[0];
+
+for(var i = 1; i < valor.lenght; i++ ){
+
+        if(valor[i] < teste){
+
+        teste = valor[i];
+
+        }
+   
+    }
+return teste;
+
+}
+ 
+document.write(menor([0,3,2,6]) + "<br>")
+document.write(menor([3,4,5]) + "<br>")
+
+</script>

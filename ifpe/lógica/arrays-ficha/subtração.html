@@ -1,0 +1,27 @@
+<script>
+
+var matrizA = [], matrizB = [], op = 0, novo = [];
+
+for(i=0; i<5; i++){
+
+matrizA[i] = parseInt(prompt("A"))
+
+}
+for(i=0; i<5; i++){
+
+matrizB[i] = parseInt(prompt("B"))
+
+}
+
+for(i=0; i < matrizA.length; i++){
+
+novo [i] = matrizA[i] - matrizB[matrizB.length -i -1]
+
+op = op + novo[i]
+}
+
+document.write("matrizA: " + matrizA + "<br>" )
+document.write("matrizB: " + matrizB + "<br>" )
+document.write("acumulado: " + op)
+
+</script>

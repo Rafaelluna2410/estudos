@@ -1,0 +1,32 @@
+<script>
+
+var matrizA = [], matrizB = [], contador =0, inteiro;
+
+inteiro = parseInt(prompt("N"))
+
+for (var i = 0; i < 10; i++) {
+        matrizA[i] = [];
+            for (var j = 0; j < 10; j++) {
+        matrizA[i][j] = parseInt(prompt("Digite um numero inteiro"));
+}
+}
+
+for(var i=0; i< 10; i++){
+    matrizB[i] = [];
+    for(var j=0; j<10; j++){
+
+        if(matrizA[i][j] == inteiro){
+            contador++
+        }else{
+
+            matrizB[i][j] = matrizA[i][j]
+
+        }
+    }
+}
+
+document.write("Valor comparado: " + inteiro + "<br>")
+document.write("Matriz principal: " + matrizA + "<br>");
+document.write("Valores diferentes: " + matrizB + "<br>");
+document.write("Inteiro: " + inteiro + " Repetiu: " + contador + "<br>");
+</script>

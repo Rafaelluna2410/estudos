@@ -12,13 +12,13 @@
 
     <script>
 
-        var dias, valorCobrado;
+        var dias;
         dias = parseInt(prompt("Digite o número de dias hospedado"));
         if (dias < 5) {
-            valorCobrado = 50 + dias * 4
+            valorCobrado = 50*dias + dias * 4
             document.write("o valor das diárias é: " + valorCobrado);
         } else {
-            valorCobrado = 50 + dias * 3.6
+            valorCobrado = 50*dias + dias * 3.6
             document.write("o valor das diárias é: " + valorCobrado);
         }
 

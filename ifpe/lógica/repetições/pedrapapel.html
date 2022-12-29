@@ -1,6 +1,6 @@
 <script>
 
-var winJogador=0, winCpu=0, empate=0,cpu, jogador;
+var winJogador=0, winCpu=0, empate=0;
 while(true){
 
 jogador = parseInt(prompt("Digite: 1-pedra, 2-papel ou 3-tesoura"));
@@ -25,11 +25,11 @@ winJogador++
         winCpu++
 }
 
-if(winJogador==2){
+if(winJogador ==2){
     document.write("o jogador ganhou")
     break;
-}else if(winCpu==2){
-        document.write("A cpu ganhou")
+}else if(winCpu == 2){
+        document.write("cpu win")
         break;
 }
 }

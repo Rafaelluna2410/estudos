@@ -1,0 +1,26 @@
+<script>
+
+var n;
+var par = [];
+var impar = [];
+
+for(var i = 1; i <=15; i++){
+
+n = parseInt(prompt("Digite n"));
+
+if(n % 2 == 0){
+
+par.unshift(n);
+
+}else {
+impar.unshift(n);
+}
+
+}
+
+document.write(par + "<br>")
+document.write(impar)
+
+
+
+</script>

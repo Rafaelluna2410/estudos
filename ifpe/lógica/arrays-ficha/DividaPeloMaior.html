@@ -1,0 +1,27 @@
+<script>
+
+var matriz = [], novo = [];
+
+for(i=0; i <3; i++){
+
+matriz[i]= parseInt(prompt("n"))
+
+}
+maior = matriz[0]
+
+for(i=1; i <= matriz.length; i++){
+    if(matriz[i] > maior){
+
+    maior = matriz[i]    
+
+    }
+
+}
+for (i = 0; i <= matriz.length; i++){
+
+op = matriz[i]/maior
+novo[i] = op
+}
+document.write(novo)
+
+</script>

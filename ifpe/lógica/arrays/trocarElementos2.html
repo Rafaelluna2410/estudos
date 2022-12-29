@@ -1,0 +1,20 @@
+<script>
+
+var elementos =[]
+
+for (var i =0; i<5; i++){
+
+elementos[i]= parseInt(prompt("Digite n"));
+
+}document.write("antes: " +elementos + "<br>");
+
+for (var i =0; i < elementos.length/2; i++){
+
+var aux = elementos[i];
+elementos[i] = elementos[elementos.length -1 -i];
+elementos[elementos.length -1 -i] = aux
+
+}
+document.write("depois: " + elementos)
+
+</script>

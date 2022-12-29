@@ -1,0 +1,26 @@
+<script>
+
+var matriz = [];
+
+for (var linha = 0; linha < 5; linha++){
+
+matriz[linha] = [];
+   for(var colunas =0; colunas <3; colunas++  ){
+
+    matriz[linha][colunas] = linha + colunas
+
+ }
+ 
+ for (var linha = 0; linha < matriz.length; linha++) {
+ document.write("| ");
+ //
+    for (var coluna = 0; coluna < matriz[0].length; coluna++) {
+        document.write(matriz[linha][coluna] + " ");
+ }
+        document.write("|<br>");
+ }
+}
+
+
+
+</script>

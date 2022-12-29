@@ -13,9 +13,9 @@
 
     <script>
 
-        var peso, multa, pesoExtra;
+        var peso;
         peso = parseFloat(prompt("Digite em kg o peso da quantidade de peixes"));
-        if (peso > 50) {
+        if (peso - 50 > 0) {
             pesoExtra = peso - 50
             multa = pesoExtra * 4
             document.write("o peso excedente é em kg: " + pesoExtra + " e o valor da multa é: " + multa);

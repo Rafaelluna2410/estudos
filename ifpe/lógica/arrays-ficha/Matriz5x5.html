@@ -1,0 +1,62 @@
+<script>
+
+var matrizA = [], soma =0, coluna =0, principal = 0, secundaria = 0, total =0, contador =1
+
+for(var i = 0; i < 5; i++){
+    matrizA[i]= [];
+        for(var j =0; j < 5; j++){
+           
+            matrizA[i][j] = parseInt(prompt(" A "))
+
+
+        }
+
+
+}
+
+for(var i = 0; i < 5; i++){
+    
+    soma += matrizA[3][i]
+}
+
+for(var i = 0; i < 5; i++){
+    
+    coluna += matrizA[i][1]
+}
+
+for(var i =0; i< 5; i++){
+    for(var j =0; j <55; j++){
+    if( i == j){
+
+        principal += matrizA[i][j]
+
+        }
+    }
+}
+
+for(var i = 0; i < 5; i++){
+    for(var j =0; j <5; j++){
+        if ( j == ( 5 -1 -i)){
+
+            secundaria += matrizA[i][j]
+        }
+    }
+}
+
+for(var i =0; i< 5; i++){
+    for(var j =0; j <5; j++){
+
+        somaL += matrizA[0][j]
+        linha
+
+    }
+}
+
+document.write( "MatrizA: " + matrizA + "<br>")
+document.write( "soma: " + soma + "<br>")
+document.write( "coluna: " +  coluna + "<br>")
+document.write( "principal: " +  principal + "<br>")
+document.write( "secundária: " +  secundaria + "<br>")
+document.write( "total: " +  total + "<br>")
+
+</script>

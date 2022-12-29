@@ -1,0 +1,22 @@
+<script>
+
+var gabarito = ["A", "D", "E"];
+var resposta  = [];
+var acertos = 0;
+for(var i = 0; i < gabarito.length; i++){
+
+resposta[i] = prompt("Digite uma letra")
+
+}
+
+for(var i = 0; i < gabarito.length; i++){
+
+ if(resposta[i] == gabarito[i]){
+
+    acertos++
+ }
+
+}
+document.write("Acertos: " + acertos)
+
+</script>

@@ -12,25 +12,17 @@
 
     <script>
 
-        var velCarro, calculo, velMax;
+        var velCarro, velMax;
         velCarro = parseFloat(prompt("Digite a sua velocidade em km/h"))
         velMax = parseFloat(prompt("Digite a velocidade máxima da pista"))
-        calculo = velCarro - velMax
-        if (calculo >= 1) {
-            if (calculo <= 10) {
-                document.write("você vai pagar 50 reais de multa")
-            }
-        }
-        if (calculo > 10) {
-            if (calculo <= 30) {
-                document.write("você vai pagar 100 reais de multa")
-            }
-        }
-        if (calculo >= 31) {
-            document.write("você vai pagar 200 reais de multa")
-        }
-        if (calculo <= 0) {
-            document.write("você não vai receber multa")
+        if(velCarro - velMax > 0 && velCarro - velMax <= 10){
+
+            document.write("multa de 50")
+
+        }else if( velCarro - velMax > 10 && velCarro - velMax <=30){
+                document.write("multa de 100")
+        }else if(velCarro - velMax> 30){
+            document.write("multa de 200")
         }
 
     </script>

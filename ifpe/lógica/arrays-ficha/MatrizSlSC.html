@@ -1,0 +1,29 @@
+<script>
+
+var matrizA =[], contador =0, linha =[], somaL =0, coluna=[], somaC =0;
+
+for(var i = 0; i < 5; i++){
+    matrizA[i]= [];
+        for(var j =0; j < 5; j++){
+           contador++
+            matrizA[i][j] = contador
+
+        }
+document.write(" | " + matrizA + " | " + "<br>") 
+}
+
+for(var i = 0; i < 5; i++){
+        for(var j =0; j < 5; j++){
+            
+            somaL += matrizA[4][j]
+            linha[i] = somaL
+            
+            somaC += matrizA[i][4]
+            coluna[i] = somaC
+        }
+}
+
+document.write("soma das colunas: " + coluna + "<br>")
+document.write("soma das linhas: " + linha + "<br>")
+
+</script>

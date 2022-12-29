@@ -1,22 +1,18 @@
 <script>
 
 //por equação fica 40 anos e se encontram aos 2.30m
-var chico= 150,juca = 110, contador =0, condic=1;
+var chico= 150,juca = 110, ano = 0;
 
-for (i =1; i<=1000 ; i ++){
+for (var i =juca; i <= chico ; i++){
 
 chico += 2
 juca += 3
+ano ++
 
-if(juca> chico ){
-
-    continue;
-
-}else if (chico <= juca){
-
-        document.write("são necessários " + i + " anos para juca passar chico")
-        break;     
-} 
+if (juca > chico){
+    document.write("anos: " +ano);
+    break;
+}
 }
 
 </script>

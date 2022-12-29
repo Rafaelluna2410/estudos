@@ -1,0 +1,20 @@
+<script>
+
+var m = [[],[],[]], v = [[],[],[]], valor;
+
+for(linha =0; linha < 3; linha++){
+    for(coluna = 0; coluna <3; coluna++){
+        m[linha][coluna] = parseInt(prompt("n"));
+
+    }
+}
+valor = parseInt(prompt("n"))
+for(linha = 0; linha < 3; linha++){
+  for(coluna = 0; coluna<3; coluna++){
+    v[linha][coluna]= m[linha][coluna] * valor;
+  }
+
+}
+
+document.write(v)
+</script>

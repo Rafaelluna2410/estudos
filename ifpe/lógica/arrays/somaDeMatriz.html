@@ -1,0 +1,12 @@
+<script>
+    var matrizP = [[2, 4, 6], [8, 10, 12], [14, 16, 18]],
+    matrizI = [[1, 3, 5], [7, 9, 11], [13, 15, 17]],
+    soma = [[],[],[]];
+    for (var linha = 0; linha < 3; linha++) {
+    for (var coluna = 0; coluna < 3; coluna++) {
+    soma[linha][coluna] = matrizP[linha][coluna] +
+    matrizI[linha][coluna];
+    }
+    }
+    document.write(soma);
+    </script>

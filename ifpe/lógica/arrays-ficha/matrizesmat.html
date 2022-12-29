@@ -1,0 +1,80 @@
+<script>
+
+var matrizA = [], matrizB=[], nova =[], op=0, soma = [], dif =[];
+for (var i = 0; i < 4; i++) {
+        matrizA[i] = [];
+            for (var j = 0; j < 6; j++) {
+              
+        matrizA[i][j] = parseInt(prompt("DIgite A"))
+    }
+}
+
+contador =0
+document.write("Matriz A: " + matrizA + "<br>")
+for (var i = 0; i < 6; i++) {
+        matrizB[i] = [];
+            for (var j = 0; j < 4; j++) {
+                
+        matrizB[i][j] = parseInt(prompt("DIgite B"))
+    }
+}
+document.write("Matriz B: " + matrizB + "<br>")
+
+for (var i = 0; i < 4; i++) {
+    nova[i] =[]
+    for (var j = 0; j < 6; j++) {
+        op =0
+       for(k=0; k < 6; k++){
+
+        op += matrizA[i][k] *  matrizB[k][j]
+
+       }      
+       nova[i][j] = op
+    }
+}
+
+for (var i = 0; i < 6; i++) {
+        for (var j = 0; j < i; j++) {
+        
+           var aux = matrizB[i][j]
+           matrizB[i][j] = matrizB[j][i]
+           matrizB[j][i]= aux 
+
+
+    }
+
+}
+
+for (var i = 0; i < 4; i++) {
+    soma[i] =[]
+    op =0
+    for (var j = 0; j < 6; j++) {
+       
+
+        op += matrizA[i][j]+ matrizB[i][j]
+  
+       soma[i][j] = op
+    }
+}
+
+
+for (var i = 0; i < 4; i++) {
+    dif[i] =[]
+    op =0
+    for (var j = 0; j < 6; j++) {
+       
+
+        op += matrizA[i][j] - matrizB[i][j]
+  
+       dif[i][j] = op
+    }
+}
+
+
+document.write("Matriz B nova : " + matrizB + "<br>")
+document.write("Produto AB: " + nova  + "<br>")
+document.write("Soma AB: " + soma  + "<br>")
+document.write("Diferença AB: " + dif  + "<br>")
+
+
+</script>
