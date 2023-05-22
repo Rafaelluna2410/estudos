@@ -1,0 +1,3 @@
+[submodule "dockerTasks"]
+	path = dockerTasks
+	url = https://github.com/Rafaelluna2410/Estudos
