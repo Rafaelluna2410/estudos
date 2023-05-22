@@ -1,0 +1,19 @@
+Os comandos "export" e "source" têm finalidades diferentes em um script e são usados em contextos distintos.
+
+O comando "export" é usado para definir variáveis de ambiente em um script. Variáveis de ambiente são variáveis que podem ser acessadas por outros processos em execução no sistema operacional. Quando uma variável é exportada usando o comando "export" em um script, ela se torna uma variável de ambiente e pode ser acessada por outros scripts ou programas em execução no mesmo ambiente de shell. Por exemplo:
+
+bash
+Copy code
+# Definindo uma variável de ambiente no script
+MINHA_VARIAVEL="Meu valor"
+export MINHA_VARIAVEL
+O comando "source", por outro lado, é usado para executar o conteúdo de um arquivo de script em um novo contexto de shell dentro do shell atual, em vez de criar um novo processo separado. Isso permite que as variáveis e funções definidas no arquivo de script sejam usadas diretamente no contexto do shell atual. Por exemplo:
+
+bash
+Copy code
+# Executando o conteúdo de um arquivo de script no contexto do shell atual
+source /caminho/do/arquivo.sh
+Em resumo, "export" é usado para definir variáveis de ambiente em um script, tornando-as disponíveis para outros processos, enquanto "source" é usado para executar o conteúdo de um arquivo de script no contexto do shell atual, tornando as variáveis e funções definidas no arquivo de script imediatamente utilizáveis no contexto do shell. A escolha entre "export" e "source" depende das necessidades específicas do seu projeto e do comportamento desejado para as variáveis e funções definidas no seu script.
+
+
+

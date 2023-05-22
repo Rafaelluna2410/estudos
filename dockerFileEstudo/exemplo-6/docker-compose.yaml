@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  dbnext2:
+    image: mysql:latest
+    volumes:
+      - x-db7:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  nextcloud:
+    depends_on:
+      - dbnext2
+    image: nextcloud:latest
+    ports:
+      - "7777:80"
+    restart: always
+    volumes:
+      - x_nextcloud5:/var/www/html
+    environment:
+      - MYSQL_PASSWORD=miguel
+      - MYSQL_DATABASE=nextcloud5
+      - MYSQL_USER=miguel
+      - MYSQL_HOST=dbnext:3306
+
+volumes:
+  x-db7:
+  x_nextcloud5:
