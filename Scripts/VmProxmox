@@ -1,0 +1,34 @@
+VM_ID="7000"
+VM_NAME="script"
+MEM_SIZE="2048"
+CORES="2"
+CI_USERNAME="teste"
+CI_PASSWORD="teste123"
+NAME_CDIMAGE="ubuntu_minimal"
+NETWORK="virtio,bridge=vmbr0"
+SIZE_DISK="32G"
+STORAGE="raid-1"
+
+qm create ${VM_ID} --memory ${MEM_SIZE} --name ${VM_NAME} --net0 ${NETWORK}
+
+qm set ${VM_ID} --ide2 ${STORAGE}:cloudinit
+
+qm set ${VM_ID} --serial0 socket --vga serial0
+
+
+qm set ${VM_ID} --ciuser ${CI_USERNAME} --cipassword ${CI_PASSWORD} --cores ${CORES} --ipconfig0 ip=dhcp --onboot 1 --ostype l26 --agent 1
+
+echo digite 1 p/ dhcp ou 2 p/ipv4 do cloudinit
+read RESPOSTA
+
+if [ $RESPOSTA -eq 1 ]; then
+qm set ${VM_ID} --ipconfig0 dhcp=1
+else
+echo "IP"
+read IP
+echo "MASK"
+read MASK
+echo "GW"
+read GW
+qm set ${VM_ID} --ipconfig0 ip=${IP}/${MASK},gw=${GW}
+fi
