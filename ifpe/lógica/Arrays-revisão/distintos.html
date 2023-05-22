@@ -1,0 +1,23 @@
+<script>
+
+    var matriz = [], contador=0, aux = null;
+    
+    for(i = 0; i < 5; i++){
+        matriz[i]=parseInt(prompt("n"))
+    }
+    
+    matriz.sort();
+    
+    for (var i = 0; i <= matriz.length; i++) {
+        if (matriz[i] != aux) {
+            if (contador > 0) {
+                document.write(aux + '  repetiu: ' + contador + '<br>');
+            }
+            aux = matriz[i];
+            contador = 1;
+        } else {
+            contador++;
+        }
+    }
+    
+    </script>

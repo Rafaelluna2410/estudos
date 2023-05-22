@@ -1,0 +1,29 @@
+<script>
+
+var matriz =[], linha =[], coluna=[];
+
+for(var i=0; i<3; i++){
+    matriz[i] = [];
+    for(var j=0; j<3; j++){
+
+        matriz[i][j] = parseInt(prompt("Digite N"));
+
+    }
+}
+
+var somaL=0, somaC=0;
+//soma linha e coluna
+for(var i=0; i<3; i++){
+    for(var j=0; j<3; j++){
+
+        somaL += matriz[2][j]; 
+        linha[i] = somaL;
+
+        somaC += matriz[i][2];
+        coluna[i] = somaC;
+    }
+}
+
+document.write("linha: " + linha + " coluna: " + coluna);
+
+</script>

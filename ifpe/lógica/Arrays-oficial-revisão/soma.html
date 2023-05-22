@@ -1,0 +1,33 @@
+<script>
+
+var A = [], B=[], novo = [], op = 0;
+
+
+for( var i=0; i<3; i++){
+
+A[i] = parseInt(prompt("A"))
+
+}
+
+for( var i=0; i<3; i++){
+
+B[i] = parseInt(prompt("B"))
+
+}
+
+for(var i=0; i< A.length; i++){
+
+novo[i] = A[i] - B[B.length -i -1]
+
+op = op + novo[i]
+
+}
+
+document.write("A: " + A + "<br>")
+document.write("B: " + B + "<br>")
+document.write("novo: " + novo + "<br>")
+document.write("soma: " + op + "<br>")
+
+
+
+</script>

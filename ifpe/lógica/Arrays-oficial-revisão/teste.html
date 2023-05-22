@@ -1,0 +1,24 @@
+<script>
+    var M = [[], [], []], determinante;
+    for (var linha = 0; linha < 3; linha++) {
+    for (var coluna = 0; coluna < 3; coluna++) {
+    M[linha][coluna] = parseInt(prompt("Informe o elemento M(" + linha +
+    "," + coluna + ")"));
+    }
+    }
+    // Calcula o determinante
+    determinante = M[0][0] * M[1][1] * M[2][2] + M[1][2] * M[1][2] * M[1][2] +
+    M[0][2] * M[1][0] * M[2][1]
+    - (M[0][2] * M[1][1] * M[2][0] + M[0][2] * M[1][1] * M[2][0] + M[0][2] *
+    M[1][1] * M[2][0]);
+    // Mostra a matriz M
+    
+    for (var linha = 0; linha < M.length; linha++) {
+    document.write("| ");
+    for (var coluna = 0; coluna < M[0].length; coluna++) {
+    document.write(M[linha][coluna] + " ");
+    }
+    document.write("|<br>");
+    }
+    document.write("Det(M): " + determinante);
+    </script>

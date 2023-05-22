@@ -1,0 +1,25 @@
+<script>
+
+var matriz =[], novo=[];
+
+for(var i=0; i<4; i++){
+
+matriz[i]= parseInt(prompt("teste"));
+
+}    
+
+for(var i=0; i<4; i++){
+    var contador =0;
+    for(var j=0; j<4; j++){
+
+        if(matriz[i] == matriz[j]){
+
+        contador++;
+
+        document.write(" valor: " + matriz[i] + " " + " apareceu: " +contador )
+           
+        }     
+    }
+}
+
+</script>

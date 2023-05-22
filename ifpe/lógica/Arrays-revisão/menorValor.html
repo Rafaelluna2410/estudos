@@ -1,0 +1,28 @@
+<script>
+
+var matrizA = [];
+
+for(i=0; i<3; i++){
+
+matrizA[i] = parseInt(prompt("N"))
+
+
+
+}
+menor = matrizA[0];
+posicao = 0
+
+for(i=0; i< matrizA.length; i++){
+
+if(matrizA[i] < menor){
+
+menor = matrizA[i]    
+posicao = i
+}
+
+}
+
+document.write(menor + "    posição: " +posicao)
+
+
+</script>

@@ -1,0 +1,20 @@
+<script>
+
+
+function imc(peso, altura){
+
+var media = peso/(altura**2)
+
+if (media < 18.5) {
+return "Abaixo do peso ideal";
+} else if (media >= 18.5 && media <= 24.9) {
+return "Peso normal";
+} else if (media >= 25.0 && media <= 29.9) {
+return "Excesso de peso";
+} else if (media >= 30) {
+return "Obeso";
+}
+
+}
+
+</script>

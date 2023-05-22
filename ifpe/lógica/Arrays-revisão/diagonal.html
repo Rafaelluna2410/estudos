@@ -1,0 +1,29 @@
+<script>
+
+matriz = []
+contador =1;
+valor =0;
+
+for(var i=0; i<10;i++){
+
+    matriz[i]=[]
+    for(var j=0; j<10; j++){
+    matriz[i][j]= contador
+    contador++
+    }
+}
+var soma=0;
+
+for(var i=0; i< matriz.length; i++){
+    for(j=0; j< matriz.length; j++){
+
+        if(i ==j){
+            soma = soma+ matriz[i][j]
+            valor++
+        }
+    }
+}
+media = soma /valor
+
+document.write(media)
+</script>

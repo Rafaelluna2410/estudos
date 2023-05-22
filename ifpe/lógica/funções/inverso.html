@@ -1,0 +1,37 @@
+<script>
+
+function inverso(num) {
+    inv = 0;
+
+while (num > 0) {
+
+resto = num % 10; 
+inv = 10 * inv + resto;  
+num = Math.floor(num / 10); 
+}
+
+    return inv;
+}
+
+    document.write(inverso(123));
+
+
+</script>
+
+Na primeira iteração:
+num é 123
+resto é o resultado da divisão de 123 por 10, ou seja, 3
+inv é o resultado de 10 * 0 + 3, ou seja, 3
+num é o resultado da divisão de 123 por 10, usando a função Math.floor() para arredondar para baixo, ou seja, 12
+Na segunda iteração:
+num é 12
+resto é o resultado da divisão de 12 por 10, ou seja, 2
+inv é o resultado de 10 * 3 + 2, ou seja, 32
+num é o resultado da divisão de 12 por 10, usando a função Math.floor() para arredondar para baixo, ou seja, 1
+Na terceira iteração:
+num é 1
+resto é o resultado da divisão de 1 por 10, ou seja, 1
+inv é o resultado de 10 * 32 + 1, ou seja, 321
+num é o resultado da divisão de 1 por 10, usando a função Math.floor() para arredondar para baixo, ou seja, 0
+Na quarta iteração:
+num é 0 e o loop para.

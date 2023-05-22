@@ -1,0 +1,39 @@
+<script>
+
+var impar = [];
+var par = [];
+var nova = [];
+var contPar=2;
+var contImpar=1;
+
+for(var i = 0; i < 3; i++){
+    par[i]=[];
+    impar[i]=[];
+
+    for(var j = 0; j <3; j++){
+
+    impar[i][j] = contImpar;
+    par[i][j] = contPar;
+
+    contPar += 2;
+    contImpar += 2;
+    }
+
+}
+
+for(var i=0; i< impar.length; i++){
+    nova[i] =[];
+    for(var j=0; j <impar.length; j++){
+
+        nova[i][j] = par[i][j]+impar[i][j]
+
+    }
+
+}
+
+
+document.write(par + "<br>")
+document.write(impar + "<br>")
+document.write(nova + "<br>")
+
+</script>

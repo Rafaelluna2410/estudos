@@ -1,0 +1,29 @@
+<script>
+
+
+gab = ["A", "B", "C", "D", "E"];
+resp = [];
+contador=0;
+
+for(var i=0; i < gab.length; i++){
+
+resp[i] = prompt("Digite")
+
+
+}
+
+for(var i=0; i < gab.length; i++){
+
+if(resp[i] == gab[i]){
+    contador++
+
+}
+
+}
+if(contador > 2){
+    document.write("aprovado " + "acertos: " + contador)
+}else{
+
+    document.write("Reprovado")
+}
+</script>

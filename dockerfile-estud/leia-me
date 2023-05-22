@@ -1,0 +1,5 @@
+exemplo-1 teste do dockerfile usando envs etc
+exemplo-2 teste usando diretório persistente e path para config do nginx
+exemplo-3 dockercompose usando dois services e estabelecendo conexão
+exemplo-4 dockercompose usando dois services e estabelecendo conexão
+exemplo-6 usando variaveis externas

@@ -1,0 +1,50 @@
+<script>
+
+//var matrizA=[], matrizB=[], contadorA =1, contadorB=1;
+
+//for(var i=0; i<2; i++){
+//   matrizA[i]=[];
+  //  for(var j=0;j<3; j++){
+//
+    //matrizA[i][j] = contadorA++;
+//
+//    }
+//}for(var i=0; i<3; i++){
+   // matrizB[i]=[];
+  //  for(var j=0;j<2; j++){
+//
+  //  
+ //   matrizB[i][j] = contadorB++
+//
+//   }
+//}
+//document.write(matrizA +" " + matrizB +"<br>")
+//document.write(multiplica(matrizA, matrizB))
+
+function multiplica(A, B) {
+
+var colunasA = A[0].length
+var linhasB = B.length
+
+if(colunasA != linhasB ){
+
+    return "colunas de A !=  linhas de B = | |";
+
+}
+
+var R = [];
+for (var i = 0; i < A.length; i++) {
+    R[i] = []; 
+    for (var j = 0; j < B.length; j++) {
+    R[i][j] = 0;
+    for (var k = 0; k < A[0].length; k++) {
+
+    R[i][j] = R[i][j] + A[i][k] * B[k][j];
+
+            }
+        }
+    }
+    return R;
+}
+
+</script>

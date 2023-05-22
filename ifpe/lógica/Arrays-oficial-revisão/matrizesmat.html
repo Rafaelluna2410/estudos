@@ -1,0 +1,83 @@
+<script>
+
+var matrizA=[], matrizB=[], produto=[], TB=[],op=0;
+
+
+for(var i=0; i<2; i++){
+    matrizA[i] = [];
+    for(var j =0; j<3; j++){
+        matrizA[i][j] = parseInt(prompt("Digite A"));
+
+    }
+}
+document.write("A: " + matrizA+"<br>");
+
+for(var i=0; i<3; i++){
+    matrizB[i] = [];
+    for(var j =0; j<2; j++){
+
+        matrizB[i][j] = parseInt(prompt("Matriz B"));
+
+    }
+
+}
+document.write("B: " + matrizB + "<br>");
+
+
+for(var i=0; i<matrizA.length; i++){
+    produto [i] =[];
+    for(var j=0; j<matrizB.length; j++){
+        produto[i][j] = 0
+        for(var k=0; k<matrizB.length; k++){
+
+        produto[i][j] += matrizA[i][k] * matrizB[k][j]
+
+        }
+    }
+}
+
+document.write("produto: " + produto +"<br>");
+
+//transposta de B
+var  TB=[[],[],[]];
+
+for (var i = 0; i < 2; i++) {
+    for (var j = 0; j < 3;j++) {
+
+        TB[j][i] = matrizB[i][j];
+
+}
+}
+
+document.write("transposta: " + matrizB +"<br>")
+//soma de A com B
+var soma=[];
+for(var i=0; i<2; i++){
+    soma[i] = [];
+        op = 0
+    for(var j =0; j<3; j++){
+
+       op= matrizA[i][j] + matrizB[i][j];
+        
+        soma[i][j] = op
+    }
+}
+
+document.write("Soma: " + soma +"<br>");
+
+//subtração de A com B
+var subi = [];
+for(var i=0; i<2; i++){
+    subi[i] = [];
+    op =0;
+    for(var j =0; j<3; j++){
+        op = matrizA[i][j] - matrizB[i][j];
+
+        subi[i][j] = op
+    }
+
+}
+
+document.write("Subi: " + subi);
+
+</script>

@@ -1,0 +1,36 @@
+<script>
+
+
+var matrizA =[], A;
+
+for(var i=0; i<3; i++){
+    matrizA[i]= []
+    for(var j=0; j<3; j++){
+        matrizA[i][j]= parseInt(prompt("A"));
+    }
+}
+document.write("matriz: " + matrizA +"<br>");
+
+var A, novo =[], contador=0;
+
+A = parseInt(prompt("digite o valor"));
+
+
+for(var i =0; i <3; i++){
+    novo[i] = [];
+    for(var j=0; j<3; j++)
+    if(matrizA[i][j] != A){
+
+        novo[i][j] = matrizA[i][j];
+
+    }else{
+
+        contador++;
+    }
+}
+
+document.write("A: " + A +"<br>");
+document.write("novo: " + novo +"<br>");
+document.write("contador: " + contador +"<br>");
+
+</script>

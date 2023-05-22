@@ -1,0 +1,36 @@
+<script>
+
+var matriz =[], novo =[];
+
+
+for(var i =0; i <3; i++){
+
+matriz[i] = parseInt(prompt("digite n"));
+
+
+}
+
+for(var i=0; i< matriz.length; i++){
+
+var maior = matriz[0]
+
+if(matriz[i] > maior){
+
+maior = matriz[i]
+
+}
+
+}
+
+for(var i =0; i< matriz.length; i++){
+
+
+novo[i] = matriz[i]/maior
+
+
+}
+document.write("antigo: "+ matriz+"<br>")
+document.write("novo: "+ novo)
+
+
+</script>
