@@ -1,0 +1,55 @@
+2023-04-26_01:44:08.01803 275:C 26 Apr 2023 01:44:08.018 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2023-04-26_01:44:08.01809 275:C 26 Apr 2023 01:44:08.018 # Redis version=6.2.11, bits=64, commit=720ea82e, modified=1, pid=275, just started
+2023-04-26_01:44:08.01809 275:C 26 Apr 2023 01:44:08.018 # Configuration loaded
+2023-04-26_01:44:08.01831 275:M 26 Apr 2023 01:44:08.018 * monotonic clock: POSIX clock_gettime
+2023-04-26_01:44:08.01856                 _._                                                  
+2023-04-26_01:44:08.01856            _.-``__ ''-._                                             
+2023-04-26_01:44:08.01857       _.-``    `.  `_.  ''-._           Redis 6.2.11 (720ea82e/1) 64 bit
+2023-04-26_01:44:08.01857   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2023-04-26_01:44:08.01857  (    '      ,       .-`  | `,    )     Running in standalone mode
+2023-04-26_01:44:08.01857  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2023-04-26_01:44:08.01858  |    `-._   `._    /     _.-'    |     PID: 275
+2023-04-26_01:44:08.01858   `-._    `-._  `-./  _.-'    _.-'                                   
+2023-04-26_01:44:08.01858  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2023-04-26_01:44:08.01858  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2023-04-26_01:44:08.01859   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2023-04-26_01:44:08.01859  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2023-04-26_01:44:08.01859  |    `-._`-._        _.-'_.-'    |                                  
+2023-04-26_01:44:08.01860   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2023-04-26_01:44:08.01860       `-._    `-.__.-'    _.-'                                       
+2023-04-26_01:44:08.01860           `-._        _.-'                                           
+2023-04-26_01:44:08.01861               `-.__.-'                                               
+2023-04-26_01:44:08.01861 
+2023-04-26_01:44:08.01861 275:M 26 Apr 2023 01:44:08.018 # Server initialized
+2023-04-26_01:44:08.01862 275:M 26 Apr 2023 01:44:08.018 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2023-04-26_01:44:08.01878 275:M 26 Apr 2023 01:44:08.018 * Loading RDB produced by version 6.2.11
+2023-04-26_01:44:08.01878 275:M 26 Apr 2023 01:44:08.018 * RDB age 3291 seconds
+2023-04-26_01:44:08.01879 275:M 26 Apr 2023 01:44:08.018 * RDB memory usage when created 4.32 Mb
+2023-04-26_01:44:08.01977 275:M 26 Apr 2023 01:44:08.019 # Done loading RDB, keys loaded: 338, keys expired: 38.
+2023-04-26_01:44:08.01977 275:M 26 Apr 2023 01:44:08.019 * DB loaded from disk: 0.001 seconds
+2023-04-26_01:44:08.01978 275:M 26 Apr 2023 01:44:08.019 * The server is now ready to accept connections at /var/opt/gitlab/redis/redis.socket
+2023-04-26_01:49:09.01366 275:M 26 Apr 2023 01:49:09.013 * 10 changes in 300 seconds. Saving...
+2023-04-26_01:49:09.01433 275:M 26 Apr 2023 01:49:09.014 * Background saving started by pid 1178
+2023-04-26_01:49:09.01946 1178:C 26 Apr 2023 01:49:09.019 * DB saved on disk
+2023-04-26_01:49:09.01963 1178:C 26 Apr 2023 01:49:09.019 * RDB: 0 MB of memory used by copy-on-write
+2023-04-26_01:49:09.11488 275:M 26 Apr 2023 01:49:09.114 * Background saving terminated with success
+2023-04-26_01:54:10.02616 275:M 26 Apr 2023 01:54:10.026 * 10 changes in 300 seconds. Saving...
+2023-04-26_01:54:10.02657 275:M 26 Apr 2023 01:54:10.026 * Background saving started by pid 1396
+2023-04-26_01:54:10.03293 1396:C 26 Apr 2023 01:54:10.032 * DB saved on disk
+2023-04-26_01:54:10.03317 1396:C 26 Apr 2023 01:54:10.033 * RDB: 0 MB of memory used by copy-on-write
+2023-04-26_01:54:10.12688 275:M 26 Apr 2023 01:54:10.126 * Background saving terminated with success
+2023-04-26_01:59:11.00413 275:M 26 Apr 2023 01:59:11.004 * 10 changes in 300 seconds. Saving...
+2023-04-26_01:59:11.00445 275:M 26 Apr 2023 01:59:11.004 * Background saving started by pid 1529
+2023-04-26_01:59:11.00924 1529:C 26 Apr 2023 01:59:11.009 * DB saved on disk
+2023-04-26_01:59:11.00954 1529:C 26 Apr 2023 01:59:11.009 * RDB: 1 MB of memory used by copy-on-write
+2023-04-26_01:59:11.10569 275:M 26 Apr 2023 01:59:11.105 * Background saving terminated with success
+2023-04-26_02:04:12.07635 275:M 26 Apr 2023 02:04:12.076 * 10 changes in 300 seconds. Saving...
+2023-04-26_02:04:12.07701 275:M 26 Apr 2023 02:04:12.076 * Background saving started by pid 1675
+2023-04-26_02:04:12.08349 1675:C 26 Apr 2023 02:04:12.083 * DB saved on disk
+2023-04-26_02:04:12.08377 1675:C 26 Apr 2023 02:04:12.083 * RDB: 0 MB of memory used by copy-on-write
+2023-04-26_02:04:12.17780 275:M 26 Apr 2023 02:04:12.177 * Background saving terminated with success
+2023-04-26_02:09:13.02444 275:M 26 Apr 2023 02:09:13.024 * 10 changes in 300 seconds. Saving...
+2023-04-26_02:09:13.02502 275:M 26 Apr 2023 02:09:13.024 * Background saving started by pid 1809
+2023-04-26_02:09:13.03063 1809:C 26 Apr 2023 02:09:13.030 * DB saved on disk
+2023-04-26_02:09:13.03093 1809:C 26 Apr 2023 02:09:13.030 * RDB: 0 MB of memory used by copy-on-write
+2023-04-26_02:09:13.12539 275:M 26 Apr 2023 02:09:13.125 * Background saving terminated with success

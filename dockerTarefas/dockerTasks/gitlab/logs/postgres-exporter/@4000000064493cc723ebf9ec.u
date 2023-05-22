@@ -1,0 +1,4 @@
+2023-04-26_14:32:11.79691 ts=2023-04-26T14:32:11.795Z caller=main.go:135 level=info msg="Listening on address" address=localhost:9187
+2023-04-26_14:32:11.80144 ts=2023-04-26T14:32:11.801Z caller=tls_config.go:195 level=info msg="TLS is disabled." http2=false
+2023-04-26_14:32:27.46660 ts=2023-04-26T14:32:27.466Z caller=server.go:74 level=info msg="Established new database connection" fingerprint=/var/opt/gitlab/postgresql:5432
+2023-04-26_14:32:27.46879 ts=2023-04-26T14:32:27.468Z caller=postgres_exporter.go:645 level=info msg="Semantic version changed" server=/var/opt/gitlab/postgresql:5432 from=0.0.0 to=13.8.0
