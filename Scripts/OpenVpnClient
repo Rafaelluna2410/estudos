@@ -1,0 +1,27 @@
+dev tun
+proto tcp
+remote 1194
+remote 1194
+tls-client
+auth-user-pass ./auth.txt        //no arquivo tem apenas logine senha 
+user nobody
+group nogroup
+verb 3
+cipher AES-256-CBC //tipo de cipher aceita pelo server
+auth SHA1 // tipo de sha aceita pelo server
+route 192.168.200.0 255.255.255.0 192.168.200.1 //saida pela rede local 
+<ca>
+-----BEGIN CERTIFICATE-----
+
+-----END CERTIFICATE-----
+</ca>
+<cert>
+-----BEGIN CERTIFICATE-----
+
+-----END CERTIFICATE-----
+</cert>
+<key>
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+
+-----END ENCRYPTED PRIVATE KEY-----
+</key>
