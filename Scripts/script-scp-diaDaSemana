@@ -1,0 +1,51 @@
+@echo off
+
+REM Configurações para transferência para o servidor de backup na rede
+set "SERVERBK=#"
+set "USERBK=###"
+set "PASSBK=###"
+
+REM Obter o dia da semana atual
+
+for /f %%a in ('wmic path win32_localtime get dayofweek ^| findstr [0-9]') do set "dow=%%a"
+
+REM Mapear o número do dia para o nome do dia
+
+if "%dow%"=="1" set "dia=H:\####\DOMINGO"
+if "%dow%"=="1" set "local=DOMINGO"
+if "%dow%"=="2" set "dia=F:\####\SEGUNDA"
+
+if "%dow%"=="2" set "local=SEGUNDA"
+if "%dow%"=="3" set "dia=F:\####\TERCA"
+
+if "%dow%"=="3" set "local=TERCA"
+if "%dow%"=="4" set "dia=G:\####\QUARTA"
+
+if "%dow%"=="4" set "local=QUARTA"
+
+if "%dow%"=="5" set "dia=G:\####\QUINTA"
+if "%dow%"=="5" set "local=QUINTA"
+
+if "%dow%"=="6" set "dia=H:\BKPDB2\SEXTA"
+
+if "%dow%"=="6" set "local=SEXTA"
+if "%dow%"=="0" set "dia=H:\####\SABADO"
+if "%dow%"=="0" set "local=SABADO"
+
+
+
+REM Definir o caminho de destino com base no dia atual
+
+set "dir=/caminho/no/server/%local%"
+
+REM Executar o pscp para transferência do diretório
+
+pscp -pw %PASSBK% -r "%dia%" %USERBK%@%SERVERBK%:%dir%
+
+
+REM TRANSFERRIR LOGS
+pscp -pw %PASSBK% -r "C:\DB2" ########@10.0.60.7:/caminho/no/server/
+pscp -pw %PASSBK% -r "C:\DB2LOGS" ########@10.0.60.7:/caminho/no/server/
+
+
+
