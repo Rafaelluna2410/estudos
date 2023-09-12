@@ -1,5 +1,6 @@
 package algoritmos;
 
+
 public class doubleLinked {
 	
 	
@@ -9,22 +10,25 @@ public class doubleLinked {
 	
 	
 	
-	public void addValue(int value) {
-		if(head == null) {
-			this.head = new Node(value);
-			this.tail = this.head;
-		}
+	public void add(int value) {
+
+		if(this.head == null) {
+		this.head = new Node(value);	
+		this.tail = this.head;	
+		}else {
 		
 		Node node = new Node(value);
+		
 		node.previos = this.tail;
-		
 		this.tail.setNext(node);
-		
 		this.tail = node;
+		this.tail.setNext(this.head);
+		this.head.setPrevios(this.tail);
+		}
 		
 		this.size++;
 		
-	}
+}
 	
 	
 	public void addValue(int value, int index) {
@@ -86,6 +90,27 @@ public class doubleLinked {
 		
 		
 	}
+	
+	
+	public float indexOf(int value) {
+		
+		Node current = this.head;
+		
+		for(int i=0; i< this.size; i++) {
+			
+			if(current.value ==value) {
+				
+				return 1;
+			
+			}
+			
+			current = current.getNext();
+		}
+		return -1;
+
+		
+	}
+	
 	
 	
 	
