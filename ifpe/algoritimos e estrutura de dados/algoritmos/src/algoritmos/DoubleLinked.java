@@ -1,7 +1,7 @@
 package algoritmos;
 
 
-public class doubleLinked {
+public class DoubleLinked {
 	
 	
 	private Node head;

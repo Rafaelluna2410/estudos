@@ -1,6 +1,6 @@
 package algoritmos;
 
-public class linkeList {
+public class LinkeList {
 
 	private Node head;
 	private Node tail;

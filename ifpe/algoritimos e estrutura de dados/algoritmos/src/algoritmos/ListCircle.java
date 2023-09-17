@@ -2,7 +2,7 @@ package algoritmos;
 
 
 
-public class listCircle {
+public class ListCircle {
 
 	
 	private Node head;
