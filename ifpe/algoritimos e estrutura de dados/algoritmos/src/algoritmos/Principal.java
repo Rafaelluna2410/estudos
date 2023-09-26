@@ -96,8 +96,19 @@ public class Principal {
 //
 //}		
 
-
-		
+		BinaryTree bst = new BinarySearchTree();
+		bst.add(10);
+		bst.add(5);
+		bst.add(3);
+		bst.add(8);
+		bst.add(17);
+		bst.add(13);
+		System.out.println();
+		bst.preOrderTraversal();
+		System.out.println();
+		bst.inOrderTraversal();
+		System.out.println();
+		bst.postOrderTraversal();
 	}
 }
 
