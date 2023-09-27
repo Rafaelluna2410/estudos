@@ -8,5 +8,5 @@ public interface Tree {
 
 	public boolean contains(int element);
 	
-	public void remove();
+	public void remove(int element);
 }

@@ -27,13 +27,55 @@ public class BinarySearchTree implements BinaryTree {
 
 
 	public boolean contains(int element) {
+		
+		return internalContains(element, this.root);
+	}
 	
+	public boolean internalContains(int element, Node node) {
+		
+		if(node !=null) {
+		if(element == node.getValue()) {
+			return true;
+		}else if(element < node.getValue()) {			
+			return internalContains(element, node.getLeft());
+		}else{		
+			return internalContains(element, node.getRight());		
+		}
+		}
+		
 		return false;
 	}
+	
+	
+	public void remove(int element) {
 
-	public void remove() {
-
+		this.root = internalRemove(element, this.root);
+	}
+	
+	private Node internalRemove(int element, Node node) {
+		if (node != null) {
+			if (element == node.getValue()) {
+				if (node.getLeft() == null && node.getRight() == null) {
+					return null;
+				} else if (node.getLeft() != null && node.getRight() != null) {
+					Node teste = node.getLeft();
+					while (teste.getRight() != null) {
+						teste = teste.getRight();
+					}
+					node.setValue(teste.getValue());
+					node.setLeft(internalRemove(node.getValue(), node.getLeft()));
+					return node;
+				} else {
+					return node.getRight() == null ? node.getLeft() : node.getRight();
+				}
+			} else if (element < node.getValue()) {
+				node.setLeft(internalRemove(element, node.getLeft()));
+			} else {
+				node.setRight(internalRemove(element, node.getRight()));
+			}
+		}
 		
+		return node;
 	}
 
 	

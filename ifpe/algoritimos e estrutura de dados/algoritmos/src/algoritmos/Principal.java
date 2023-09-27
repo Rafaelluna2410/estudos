@@ -103,12 +103,11 @@ public class Principal {
 		bst.add(8);
 		bst.add(17);
 		bst.add(13);
-		System.out.println();
-		bst.preOrderTraversal();
-		System.out.println();
 		bst.inOrderTraversal();
-		System.out.println();
-		bst.postOrderTraversal();
+		bst.remove(3);
+		System.out.println(" ");
+		bst.inOrderTraversal();
+		
 	}
 }
 
