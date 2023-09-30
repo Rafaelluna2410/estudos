@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registryStyle.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <h1>Create a new account</h1>
+    <form method="post">
+
+        <fieldset>
+            <Strong>Account</Strong>
+            <li><label for="firstname">Name:</label>
+                <input id="firstname" name="firstname">
+            </li>
+            <li> <label for="lastname">Last Name:</label>
+                <input name="lastname" id="lastname">
+            </li>
+            <li><label for="email">E-mail:</label>
+                <input name="email" id="email" type="email">
+            </li>
+            <li><label for="pass">Password:</label>
+                <input name="pass" id="pass" type="password">
+            </li>
+            <li> <label for="repass">Confirm password:</label>
+                <input type="password" name="pass" id="pass">
+            </li>
+
+        </fieldset>
+
+    </form>
+
+    <form method="post">
+
+        <fieldset>
+            <div><strong>Address</strong></div>
+            <li><label for="address">Address:</label>
+                <input name="address" id="address"></li>
+            <li><label for="complement">Complement:</label>
+                <input name="Complement" id="Complement"></li>
+            <li><label for="city">City:</label>
+                <input name="city" id="city"></li>
+           <li> <label for="state">State:</label>
+            <select id="state">
+                <option value="PE">PE</option>
+                <option value="CE">CE</option>
+                <option value="PB">PB</option>
+            </select></li>
+            <li><label for="cep">CEP:</label>
+                <input name="cep" id="cep"></li>
+        </fieldset>
+
+
+    </form>
+
+    <form action="post">
+        <fieldset>
+            <div><strong>Perfil</strong></div>
+            <li><label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto"></li>
+            <p>Max size 700k, JPG, GIF PNG.</p>
+            <li><label for="name">Name:</label>
+                <input name="name" id="name"></li>
+            <li><label for="site">Site:</label>
+                <input name="site" id="site"></li>
+            <p>Do you have a website or a blog? Put the address here.</p>
+            <textarea name="mensagem" rows="10" cols="50">
+
+            </textarea>
+            <li><p>Gênero:</p>
+                <input type="radio" id="male" name="genero" value="male">
+                <label for="male">male</label><br>
+                <input type="radio" id="female" name="genero" value="female">
+                <label for="female">female</label><br>
+                <input type="radio" id="other" name="genero" value="other">
+                <label for="other">other</label></li>
+        </fieldset>
+    </form>
+    <form action="post">
+
+
+        <fieldset>
+            <div> <strong>E-mails</strong></div>
+            <li><input type="checkbox" id="users" name="users" value="users">
+                <label for="users">It's okay to email messages from other users.</label><br></li>
+            <li><input type="checkbox" id="products" name="products" value="products">
+                <label for="products">It's okay to send occasional emails with promotions about other products.</label><br></li>
+        </fieldset>
+
+
+    </form>
+    <form action="post">
+        <fieldset><button>Create account</button></fieldset>
+    </form>
+
+</body>
+
+</html>
