@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  header {
+    padding: 1.15%;
+    text-align: left;
+    background-color: rgb(17, 218, 151);
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  a{
+
+    color: white;
+  }
+  header a {
+    margin: 1%;
+ 
+  }
+
+nav{
+
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(17, 218, 151);
+    
+    
+}
+.praia{
+
+  width: 70%;
+  margin: auto;
+}
+nav a{
+
+  margin: 0.75%;
+}
+.principal{
+  
+  padding: 3.5%;
+ 
+}
+.praia{
+
+  max-width: 100%;
+  height: auto;
+  display: block;
+ 
+}
+p{
+  font-size: larger;
+  line-height: 160%;
+}
+.agendarViagem label, input{
+
+display: block;
+
+}
+main{
+
+background-color: rgba(127, 255, 212, 0.281);
+
+
+}
+footer{
+font-size: large;
+color: black;
+padding: 3.5%;
+display: flex;
+justify-content: space-around;
+background-color: rgb(17, 218, 151);
+}
+footer a{
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+
+.redes-sociais {
+  
+  list-style: none; /* Remove os pontos/bolinhas das listas */
+  padding: 0; /* Remove o preenchimento padrão das listas */
+  margin-right: 20px;
+  text-decoration: none;
+  margin-bottom: 10px; 
+}
+
+
+.destinos{
+
+display: flex;
+justify-content: space-around;
+text-align: justify;
+
+padding: 0.5%;
+border: 0.5%;
+
+
+
+}
+
+.jamaica, .bahamas, .butao {
+ margin: 0.75%; 
+ width: 25%;
+}
+
+.imagensDestinos{
+
+  width: 100%;
+}
