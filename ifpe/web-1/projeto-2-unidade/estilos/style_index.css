@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+    
   }
   
   header {
@@ -56,14 +57,79 @@ p{
   font-size: larger;
   line-height: 160%;
 }
+
+.agendarViagem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.agendarViagem form {
+  grid-column: 1;
+width: 50%
+
+}
+
+.agendarViagem .mapa {
+  grid-column: 2; 
+  width: 100%;
+}
+
 .agendarViagem label, input{
 
 display: block;
+}
+
+h1{
+
+margin-bottom: 2.5%;
+  
+}
+
+fieldset {
+
+
+
+font-size: larger;background-color: rgba(2, 251, 180, 0.159);
+border: 1px white solid;
+padding: 20px;
+line-height:200%;
 
 }
+input{
+
+padding: 5px 10px;
+margin: 8px 0;
+box-sizing: border-box;
+
+
+}
+.button {
+padding: 5%;
+font-size: large;
+margin-top: 10%;
+float: left;
+border-radius: 5%;
+color: black;
+background-color: rgba(0, 255, 179, 0.318);
+border: 1px white solid;
+
+}
+
+.reset {
+  padding: 5%;
+  margin-top: 10%;
+  font-size: large;
+  float: right;
+  border-radius: 5%;
+  color: black;
+  background-color: rgba(0, 255, 179, 0.318);
+  border: 1px white solid;
+}
+
 main{
 
-background-color: rgba(127, 255, 212, 0.281);
+background-color: rgba(18, 184, 129, 0.281);
 
 
 }
@@ -81,14 +147,7 @@ footer a{
   text-decoration: none;
 }
 
-.redes-sociais {
-  
-  list-style: none; /* Remove os pontos/bolinhas das listas */
-  padding: 0; /* Remove o preenchimento padrão das listas */
-  margin-right: 20px;
-  text-decoration: none;
-  margin-bottom: 10px; 
-}
+
 
 
 .destinos{
@@ -107,9 +166,67 @@ border: 0.5%;
 .jamaica, .bahamas, .butao {
  margin: 0.75%; 
  width: 25%;
+
 }
 
 .imagensDestinos{
 
   width: 100%;
+  height: 20%;
+}
+
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.dots{
+
+  background-color: white;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  background-color:  rgba(17, 218, 151, 0.463);
+  border: 2px white solid;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.dot:nth-child(1) {
+  left: 50%;
+  transform: translateX(-150%);
+}
+
+.dot:nth-child(2) {
+  left: 50%;
+  transform: translateX(0%);
+  bottom: 10px;
+}
+
+.dot:nth-child(3) {
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(150%);
+}
+.redes_sociais {
+  
+  list-style: none;
+  padding: 0;
+  margin-right: 20px;
+  text-decoration: none;
+  margin-bottom: 10px; 
 }

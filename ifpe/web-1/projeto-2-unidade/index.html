@@ -2,16 +2,14 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./estilos/style_index.css">
     <title>home</title>
 </head>
 <body>
     <header>
-            <div>
-                
+            <div>                
             <a href="index.html"><img src="imagens/logo.png" alt="logo"></a>
-
             </div>
             <a href="#">Status de voos</a>
             <a href="#">Pass Promocional</a>
@@ -24,35 +22,53 @@
         <a href="#">Sobre</a>
     </nav>
     <main>
-        <div class="praia">
-            <img class="praia" src="imagens/praia2.png" alt="praia">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="imagens/slide/praia2.png" alt="Imagem 1">
         </div>
+    
+        <div class="mySlides fade">
+          <img src="imagens/slide/slideFerias.jpg" alt="Imagem 2">
+        </div>
+    
+        <div class="mySlides fade">
+          <img src="imagens/slide/slideMala.jpg" alt="Imagem 3">
+        </div>
+    
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    <script src="script.js"></script>
+
+  </div>
     <div class="principal">
 
+
+    <div class="agendarViagem">
     <h1>
         Agende a sua viagem
     </h1>
 
-    <div class="agendarViagem">
-      <p>
         <form action="post">
           <fieldset>
-              <label for="destino">Local de destino:</label>
-              <input id="destino" type="text">
-              <label for="data">Data de partida:</label>
+              <label for="destino">Destino</label>
+              <input id="destino" type="text" placeholder="Digite seu destino">
+              <label for="data">Data de partida</label>
               <input type="date" id="data">
-              <label for="nome">Seu Nome:</label>
-              <input type="text" id="nome">
-              <label for="email">E-mail:</label>
-              <input type="email" id="email" name="email" >
-              <label for="telefone">Telefone para contato:</label>
-              <input type="text" id="telefone">
-              <input class="button" type="submit" value="agendar">
-              <input class="reset" type="reset" value="reset">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" placeholder="Digite seu nome">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="digite seu email">
+              <label for="telefone">Telefone</label>
+              <input type="text" id="telefone" placeholder="digite seu telefone">
+              <input class="button" type="submit" value="Agendar">
+              <input class="reset" type="reset" value="Limpar">
           </fieldset>
         </form>
-      
-      </p>
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63227.66647522173!2d-34.86020014605176!3d-7.923333001176556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e5333e4e803%3A0x5dddf89915f12b04!2sAv.%20Dr.%20Cl%C3%A1udio%20Jos%C3%A9%20Gueiros%20Leite%2C%207115-7155%20-%20Nossa%20Sra.%20do%20%C3%93%2C%20Paulista%20-%20PE%2C%20Brazil!5e0!3m2!1spt-BR!2sbr!4v1699064249239!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <h2>Destinos interessantes</h2>
     <div class="destinos">
@@ -108,7 +124,7 @@
           </div>
         <div>
             <p>Contatos</p>
-            <ul class="redes-sociais">
+            <ul class="redes_sociais">
                 <li>
                   <a href="https://github.com/rafaellunaM" target="_blank">
                     <img src="./imagens/github.png" alt="GitHub Icone"> GitHub
