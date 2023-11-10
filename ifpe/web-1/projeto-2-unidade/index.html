@@ -22,37 +22,10 @@
         <a href="#">Sobre</a>
     </nav>
     <main>
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="imagens/slide/praia2.png" alt="Imagem 1">
-        </div>
-    
-        <div class="mySlides fade">
-          <img src="imagens/slide/slideFerias.jpg" alt="Imagem 2">
-        </div>
-    
-        <div class="mySlides fade">
-          <img src="imagens/slide/slideMala.jpg" alt="Imagem 3">
-        </div>
-    
-        <div class="dots">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-      </div>
-    <script src="script.js"></script>
-
-  </div>
-    <div class="principal">
-
-
+  
     <div class="agendarViagem">
-    <h1>
-        Agende a sua viagem
-    </h1>
-
-        <form action="post">
+      <h1> Agende a sua viagem</h1>
+        <form action="post"> 
           <fieldset>
               <label for="destino">Destino</label>
               <input id="destino" type="text" placeholder="Digite seu destino">
@@ -68,12 +41,14 @@
               <input class="reset" type="reset" value="Limpar">
           </fieldset>
         </form>
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63227.66647522173!2d-34.86020014605176!3d-7.923333001176556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e5333e4e803%3A0x5dddf89915f12b04!2sAv.%20Dr.%20Cl%C3%A1udio%20Jos%C3%A9%20Gueiros%20Leite%2C%207115-7155%20-%20Nossa%20Sra.%20do%20%C3%93%2C%20Paulista%20-%20PE%2C%20Brazil!5e0!3m2!1spt-BR!2sbr!4v1699064249239!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+  </div>
+  
+  <div class="destinos_background">
     <h2>Destinos interessantes</h2>
     <div class="destinos">
+      
         <div class="jamaica">
-            <p class="borda">JAMAICA</p>
+            <p>JAMAICA</p>
             <img class="imagensDestinos" src="./imagens/jamaica.jpeg" alt="jamaica praia">
             
             <p>
@@ -105,9 +80,14 @@
                 Paisagens Deslumbrantes: O Butão é abençoado com paisagens espetaculares, incluindo montanhas majestosas, vales verdejantes e florestas exuberantes. A caminhada no Butão é uma experiência incrível, com trilhas que levam a locais sagrados e panorâmicos.</p>
         </div>
 
-
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <script src="script.js"></script>
     </div>
-    </div>
+  </div>
 
     </main>
     <footer>

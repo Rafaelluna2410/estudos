@@ -1,47 +1,18 @@
-let slideIndex = 0; 
-let interval; 
+let locais = [".jamaica", ".bahamas", ".butao"];
 
+let jamaica = document.querySelector(locais[0]);
+let bahamas = document.querySelector(locais[1]);
+let butao = document.querySelector(locais[2]);
 
-showSlides(); 
+jamaica.style.display = "none";
+bahamas.style.display = "none";
+butao.style.display = "none";
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function mostrar() {
+    for (let i = 0; i < locais.length; i++) {
+        let element = document.querySelector(locais[i]);
+        element.style.display = "block";
+    }
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n !== undefined) {
- 
-    slideIndex = n;
-    clearInterval(interval); 
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slideIndex++;
-
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-    clearInterval(interval);
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-
-  interval = setInterval(function () {
-    plusSlides(0);
-  }, 5000);
-}
+setTimeout(mostrar, 5000);
