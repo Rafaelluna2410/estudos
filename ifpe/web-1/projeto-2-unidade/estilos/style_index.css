@@ -66,7 +66,8 @@
 header {
     padding: 1.15%;
     text-align: left;
-    background-color: rgb(17, 218, 151);
+/*     background-color: rgb(17, 218, 151); */
+background-color: rgba(18, 184, 129, 0.281);
     display: flex;
     justify-content: space-around;
 }
@@ -82,7 +83,8 @@ nav{
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(17, 218, 151);   
+  /*   background-color: rgb(17, 218, 151);    */
+  background-color: rgba(18, 184, 129, 0.281);
 }
 
 nav a{
@@ -182,26 +184,6 @@ border: 1px white solid;
   
 }
 
-.dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 8px;
-  background-color: #080000;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.dot.active {
-  background-color: #0a0000;
-}
-
 
 .scrollable-paragraph {
   max-height: 250px;
@@ -242,3 +224,64 @@ footer a{
   text-decoration: none;
   margin-bottom: 10px; 
 }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 35%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-top: 60px;
+}
+
+.modal-content {
+  max-width: 70%;
+  display: block;
+   background-color: rgba(0, 255, 179, 0.575);
+  margin: 5% auto;
+  padding: 10px;
+  border: 1px solid white;
+  width: 15%;
+  
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 200%;
+  font-weight: bold;
+}
+.reset_login{
+  padding: 1.5%;
+  margin-top: 1%;
+  border-radius: 5%;
+  color: black;
+  border: 1px white solid;
+  float: right;
+
+}
+.login_input{
+  padding: 5px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  float: left;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#login_butao{
+  font-size: large;
+  color:rgb(0, 187, 134);
+  margin-top: 1.1%;
+  padding: 0.5%;
+  border: 0.1% solid black;
+  border-radius: 30%;
+  }

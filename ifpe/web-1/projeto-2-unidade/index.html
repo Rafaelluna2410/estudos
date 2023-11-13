@@ -18,7 +18,24 @@
             </div>
             <a href="#">Status de voos</a>
             <a href="#">Pass Promocional</a>
-            <a class="login" href="#">Login</a>
+            <button id="login_butao">Login</button>
+            <div id="loginModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="fecharModal()">&times;</span>
+                <h2>Login</h2>
+                <form action="./script.js" method="post">
+                  <label for="username">Usuário:</label>
+                  <input type="text" id="username" name="username" required>
+                  <label for="password">Senha:</label>
+                  <input type="password" id="password" name="password" required>
+                  <input class="login_input" type="submit" value="Login">
+                  <input class="reset_login" type="reset" value="Limpar">
+                </form>
+              </div>
+            </div>
+              
+        <script src="script.js"></script>
+     
     </header>
     <nav>
         <a href="#">Destinos</a>
@@ -87,13 +104,7 @@
                 Cultura Preservada: O Butão é conhecido por sua cultura rica e preservada. A cultura tradicional do país é fortemente enraizada no budismo tibetano, e você encontrará mosteiros antigos, dzongs (fortalezas monásticas) e festivais religiosos coloridos.   
                 Paisagens Deslumbrantes: O Butão é abençoado com paisagens espetaculares, incluindo montanhas majestosas, vales verdejantes e florestas exuberantes. A caminhada no Butão é uma experiência incrível, com trilhas que levam a locais sagrados e panorâmicos.</p>
         </div>
-        <div class="dots">
-          <span id="dot1" onclick="currentSlide(1)"></span>
-          <span id="dot2" onclick="currentSlide(2)"></span>
-          <span id="dot3" onclick="currentSlide(3)"></span>
-      </div>
-        <script src="script.js"></script>
-     
+
     </div>
     
   
@@ -135,6 +146,6 @@
               
         </div>
     </footer>
-
+  
 </body>
 </html>
