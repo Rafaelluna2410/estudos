@@ -7,6 +7,12 @@
     <title>home</title>
 </head>
 <body>
+  <div class="slider">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  <div>
     <header>
             <div>                
             <a href="index.html"><img src="imagens/logo.png" alt="logo"></a>
@@ -21,7 +27,10 @@
         <a href="#">Minhas viagens</a>
         <a href="#">Sobre</a>
     </nav>
+
+  
     <main>
+    
   
     <div class="agendarViagem">
       <h1> Agende a sua viagem</h1>
@@ -79,17 +88,20 @@
                 Cultura Preservada: O Butão é conhecido por sua cultura rica e preservada. A cultura tradicional do país é fortemente enraizada no budismo tibetano, e você encontrará mosteiros antigos, dzongs (fortalezas monásticas) e festivais religiosos coloridos.   
                 Paisagens Deslumbrantes: O Butão é abençoado com paisagens espetaculares, incluindo montanhas majestosas, vales verdejantes e florestas exuberantes. A caminhada no Butão é uma experiência incrível, com trilhas que levam a locais sagrados e panorâmicos.</p>
         </div>
-
         <div class="dots">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+          <span id="dot1" onclick="currentSlide(1)"></span>
+          <span id="dot2" onclick="currentSlide(2)"></span>
+          <span id="dot3" onclick="currentSlide(3)"></span>
+      </div>
         <script src="script.js"></script>
+     
     </div>
+    
+  
   </div>
 
     </main>
+    
     <footer>
         <div class="container">
            
@@ -124,5 +136,6 @@
               
         </div>
     </footer>
+
 </body>
 </html>
