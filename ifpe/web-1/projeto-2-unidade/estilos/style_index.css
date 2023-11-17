@@ -63,9 +63,8 @@
   }
 }
 header {
-    padding: 1.15%;
     text-align: left;
-background-color: rgba(18, 184, 129, 0.281);
+    background-color: rgba(18, 184, 129, 0.281);
     display: flex;
     justify-content: space-around;
 }
@@ -119,7 +118,6 @@ margin-bottom: 2.5%;
 margin: 2.5%;
 
 }
-
 
 fieldset {
 font-size: larger;
@@ -236,12 +234,13 @@ footer a{
   display: none;
   position: fixed;
   z-index: 1;
-  left: 37%;
-  top: 0%; 
+  /* left: 37%;
+  top: 0%;  */
   width: 100%;
   height: 100%;
   overflow: auto;
   max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   
 }
 .modal-content a{
@@ -258,10 +257,11 @@ text-decoration: none;
 }
  .modal-content {
   box-sizing: border-box;
-  max-width: 10%;
+  max-width: 15%;
+  max-height: 40%;
   display: block;
-  background-color: rgba(0, 255, 179, 0.575);
-  margin: 5% auto;
+  background-color: rgba(0, 255, 179, 0.699);
+  margin: 10% auto;
   padding: 1%;
   border: 1px solid white;
   line-height: 200%;
@@ -279,22 +279,23 @@ text-decoration: none;
 
 }
 .close {
-  color: #aaa;
+  color: #ffffff;
   float: right;
   font-size: 200%;
   font-weight: bold;
 }
 .login_input,
 .reset_login {
-  width: 50%; 
+  width: 60%; 
   box-sizing: border-box; 
+  margin: 5%;
 }
 .login_input{
   font-size: larger;
   background-color: white;
   border: 1px solid white;
   color: rgb(0, 3, 2);
-  margin: 1%;
+  /* margin: 1%; */
 }
 .login_input:hover{
  
@@ -315,7 +316,7 @@ text-decoration: none;
   display: flex;
   
   justify-content: space-evenly;
-  margin: 4%;
+  margin: 5%;
  
 }
 

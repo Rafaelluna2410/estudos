@@ -23,7 +23,7 @@
               <div class="modal-content">
                 <span class="close" onclick="fecharModal()">&times;</span>
                 <h2>Login</h2>
-                <form class="modal_form" action="./script.js" method="post">
+                <form class="modal_form" action="post" method="post">
                   <label for="username">Usuário:</label>
                   <input type="text" id="username" name="username" required>
                   <label for="password">Senha:</label>
@@ -33,13 +33,14 @@
                     <input class="reset_login" type="reset" value="Limpar">
                   </div>
                 </form>
-                <a href="">recuperar login</a>
+                <a href="./cadastro_login.html">Cadastre-se</a>
+                <a href="./lembrar_login.html">Lembrar login</a>
               </div>
               
             </div>
             
               
-        <script src="script.js"></script>
+        <script src="./scripts/modal_login.js"></script>
      
     </header>
     <nav>
@@ -112,14 +113,13 @@
 
     </div>
     
-  
+  </main> 
   </div>
+  
 </div>
-    </main>
-    
+      
     <footer>
-        <div class="container">
-           
+        <div class="container">           
             <ul>
               <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>
               <li><a href="#">Política de Cookies</a></li>

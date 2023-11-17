@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/style_cadastro_login.css">
+    <title>criar login</title>
+</head>
+<body>
+    <body>
+        <div class="slider">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <header>
+                  <div>                
+                  <a href="index.html"><img src="imagens/logo.png" alt="logo"></a>
+                  </div>
+                  <a class="a_header_nav" href="#">Status de voos</a>
+                  <a class="a_header_nav" href="#">Pass Promocional</a>
+                  <button id="login_butao">Login</button>
+                  <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="fecharModal()">&times;</span>
+                      <h2>Login</h2>
+                      <form class="modal_form" action="post" method="post">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="form-buttons">
+                          <input class="login_input" type="submit" value="Login">
+                          <input class="reset_login" type="reset" value="Limpar">
+                        </div>
+                      </form>
+                      <a href="./cadastro_login.html">Cadastre-se</a>
+                      <a href="./lembrar_login.html">Lembrar login</a>
+                    </div> 
+                  </div>                           
+             <script src="./scripts/modal_login.js"></script>      
+          </header>
+          <nav>
+              <a class="a_header_nav" href="#">Destinos</a>
+              <a class="a_header_nav" href="#">Central de ajuda</a>
+              <a class="a_header_nav" href="#">Minhas viagens</a>
+              <a class="a_header_nav" href="#">Sobre</a>
+          </nav>     
+          <main>   
+            <div class="cadastro"> 
+                <h1>Cadastre-se</h1>
+            <form class="form_cadastro" action="post"> 
+                <fieldset>    
+                  <label for="data">Data de Nascimento</label>
+                  <input type="date" id="data" required>         
+                  <label for="nome">Nome</label>
+                  <input type="text" id="nome" placeholder="Digite seu nome" required>        
+                  <label for="genero">Gênero</label>
+                  <select id="genero" name="genero">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required> 
+                  <label for="telefone">Telefone</label>
+                  <input type="tel" id="telefone" placeholder="Digite seu telefone" pattern="[0-9]{10,11}">       
+                  <label for="endereco">Rua</label>
+                  <input type="text" id="endereco" placeholder="Digite seu endereço"> 
+                  <label for="cidade">Cidade</label>
+                  <input type="text" id="cidade" placeholder="Digite sua cidade">
+                  <label for="estado">Estado</label>
+                  <select id="estado" name="estado">
+                    <option value="" disabled selected>Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio grande do Norte</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraiba</option>
+                  <label for="cep">CEP</label>
+                  <input type="text" id="cep" placeholder="Digite seu CEP" pattern="[0-9]{5}-[0-9]{3}">
+                <div class="cadastro-buttons">
+                  <input class="cadastrar_input" type="submit" value="cadastrar">
+                  <input class="reset_cadastrar" type="reset" value="Limpar">
+                </div>
+              </form>    
+            </div>
+        </main> 
+        </div>    
+      </div>      
+          <footer>
+              <div class="container">           
+                  <ul>
+                    <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="/termos-de-servico">Termos de Serviço</a></li>
+                    <li><a href="#">Ajuda</a></li>     
+                  </ul>
+                  <p>&copy; 2023 Rafael Miguel Luna. Todos os direitos reservados.</p>
+                </div>
+              <div>
+                  <p>Contatos</p>
+                  <ul class="redes_sociais">
+                      <li>
+                        <a href="https://github.com/rafaellunaM" target="_blank">
+                          <img src="./imagens/github.png" alt="GitHub Icone"> GitHub
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/rafael_migueel_/" target="_blank">
+                          <img src="./imagens/instagram.png" alt="Instagram Icone"> Instagram
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/rafael-miguel-luna/" target="_blank">
+                          <img src="./imagens/linkedin.png" alt="Linkedin Icone"> Linkedin
+                        </a>
+                      </li>
+                    </ul>                 
+              </div>
+          </footer>
+        
+      </body>
+
+
+
+
+
+
+
+</body>
+</html>
