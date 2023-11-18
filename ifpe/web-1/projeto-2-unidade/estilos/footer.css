@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+}
+
+footer{
+font-size: large;
+color: black;
+padding: 3.5%;
+display: flex;
+justify-content: space-around;
+background-color: rgb(17, 218, 151);
+}
+footer a{
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+.redes_sociais{
+  list-style: none;
+  padding: 0;
+  margin-right: 0px;
+  text-decoration: none;
+  margin-bottom: 10px; 
+}

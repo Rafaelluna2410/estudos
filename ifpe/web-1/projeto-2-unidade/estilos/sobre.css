@@ -1,0 +1,17 @@
+#Sobre {
+  text-align: left;
+  max-width: 800px;
+  margin: 1% auto;
+  font-size: larger;
+  background-color: rgba(2, 251, 180, 0.507);
+  border: 1px white solid;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 15px;
+}
