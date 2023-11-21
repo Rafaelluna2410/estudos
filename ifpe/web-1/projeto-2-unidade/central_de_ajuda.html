@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de ajuda</title>
+    <link rel="stylesheet" href="estilos/header-nav.css">
+    <link rel="stylesheet" href="estilos/footer.css">
+    <link rel="stylesheet" href="estilos/global.css">
+    <link rel="stylesheet" href="estilos/central_de_ajuda.css">
+    <script src="/scripts/header-nav_template.js"></script>
+    <script src="/scripts/modal_login.js"></script>
+    <script src="/scripts/footer_template.js"></script>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div id="headerAndNavContainer"></div>
+        <main>
+           <div id="central_de_ajuda">
+            <h1>Fale conosco</h1>
+            <form action="post" class="form_contato">
+                <fieldset class="fieldset_form">
+                    <label for="mensagem">Nos envie uma mensagem </label>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
+                    <label for="email">Digite seu  para contato email</label>
+                    <input type="email" name="email">
+                    <label for="telefone">Digite seu telefone para contato</label>
+                    <input type="text" name="telefone">
+                    <div class="enviar_reset">
+                        <input class="enviar" type="submit" value="Enviar">
+                        <input class="limpar" type="reset" value="Limpar">
+                    </div>
+                </fieldset>
+            </form>
+            <div class="links">
+                <a href="https://api.whatsapp.com/send?phone=81999329229" target="_blank">
+                    <img class="icones" src="imagens/whatsappIcone.png" alt="icone whatsapp">  whatsapp</a>
+                <a href="mailto:rafael.luna.cavalcanti@gmail.com" target="_blank">
+                    <img  class="icones" src="/imagens/email.png" alt="Email Icone"> Email</a>
+            </div>
+           </div>
+        </main>
+    </div>
+    <div id="footerContainer"></div>
+</body>
+</html>

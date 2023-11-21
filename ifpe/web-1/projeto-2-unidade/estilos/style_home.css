@@ -1,0 +1,150 @@
+main{
+  display: flex;
+  flex-direction: row;
+  gap: 2.5%;
+  padding-left: 3.5%;
+  padding-right: 3.5%; 
+  background-color: rgba(18, 184, 129, 0.281);
+  max-height: 700px;  
+}
+body{
+  margin: 0;
+  max-height: 600px;
+  animation-delay: -5s;
+  background-color: rgba(18, 184, 129, 0.281);
+ } 
+ .slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+}
+
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slide 30s infinite;
+  z-index: -1; 
+}
+
+.slider .slide:nth-child(1) {
+  background-image: url('/imagens/slide/mala.jpg');
+  animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+  background-image: url('/imagens/slide/ondas.jpg');
+  animation-delay: 10s;
+}
+  
+.slider .slide:nth-child(3) {
+  background-image: url('/imagens/slide/praia.jpg');
+  animation-delay: 20s;
+}
+@keyframes slide {
+  0%, 15%, 100% {
+    transform: translateX(0);
+    animation-timing-function: ease;
+  }
+  50% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  80% {
+    transform: translateX(100%);
+    animation-timing-function: ease;
+ 
+  }
+}
+.agendarViagem label, input{
+
+display: block;
+}
+h1{
+font-size: 20px;
+margin-top: 30%;
+margin-bottom: 2.5%;
+}
+.agendarViagem{
+margin: 2.5%;
+}
+fieldset {
+font-size: larger;
+background-color: rgba(2, 251, 180, 0.159);
+border: 1px white solid;
+padding: 20px;
+line-height:200%;
+
+}
+.form_agendar input{
+padding: 5px 10px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+.button {
+padding: 5%;
+font-size: large;
+margin-top: 10%;
+float: left;
+border-radius: 5%;
+color: black;
+background-color:white;
+}
+.button:hover{
+  background-color: rgba(0, 255, 179, 0.318);
+  border: 1px white solid;
+
+}
+.reset {
+  padding: 5%;
+  margin-top: 10%;
+  font-size: large;
+  float: right;
+  border-radius: 5%;
+  color: black;
+  
+  border: 1px white solid;
+}
+.reset:hover{
+
+  background-color: rgba(0, 255, 179, 0.318);
+  border: 1px white solid;
+}
+.destinos{
+  max-height: 500px;
+  size: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: justify;
+
+}
+.jamaica, .bahamas, .butao {
+   background-color: rgba(0, 255, 179, 0.575);
+   display: block;
+   margin: 0.75%; 
+   width: 25%;
+   padding: 2%;
+   border: 1px solid white;
+
+ 
+}
+.scrollable-paragraph {
+  max-height: 250px;
+  overflow: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  
+}
+.destinos_background{
+margin-top: 7.5%;
+max-height: 500px;
+}
+.imagensDestinos{
+    width: 100%;
+    height: 30%;
+  }

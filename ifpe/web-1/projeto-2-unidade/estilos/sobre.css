@@ -1,11 +1,60 @@
+.slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+}
+
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slide 30s infinite;
+  z-index: -1; 
+}
+
+.slider .slide:nth-child(1) {
+  background-image: url('/imagens/slide/mala.jpg');
+  animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+  background-image: url('/imagens/slide/ondas.jpg');
+  animation-delay: 10s;
+}
+  
+.slider .slide:nth-child(3) {
+  background-image: url('/imagens/slide/praia.jpg');
+  animation-delay: 20s;
+}
+@keyframes slide {
+  0%, 15%, 100% {
+    transform: translateX(0);
+    animation-timing-function: ease;
+  }
+  50% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  80% {
+    transform: translateX(100%);
+    animation-timing-function: ease;
+ 
+  }
+}
 #Sobre {
-  text-align: left;
+  text-align: justify;
   max-width: 800px;
   margin: 1% auto;
   font-size: larger;
   background-color: rgba(2, 251, 180, 0.507);
   border: 1px white solid;
   padding: 20px;
+  line-height: 140%;
 }
 
 h1, h2 {
@@ -13,5 +62,5 @@ h1, h2 {
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }

@@ -1,0 +1,55 @@
+#central_de_ajuda{
+text-align: center;
+margin: 1% auto;
+border: solid 1px white;
+padding: 1%;
+background-color: rgba(2, 251, 180, 0.159);
+font-size: larger;
+
+}
+.form_contato{
+    line-height: 150%;
+}
+.fieldset_form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 170%;
+}
+.fieldset_form input{
+
+    max-width: 50%;
+}
+.fieldset_form label{
+
+}
+.enviar_reset{
+display: inline-block;
+}
+.limpar{
+font-size: large;
+color: black;
+background-color:white;
+}
+.enviar{
+font-size: large;
+color: black;
+background-color:white;
+}
+.limpar:hover{
+background-color: rgba(0, 255, 179, 0.318);
+border: 1px white solid; 
+}
+.enviar:hover{
+background-color: rgba(0, 255, 179, 0.318);
+border: 1px white solid;
+}
+.links{
+display: inline-block;
+
+}
+.icones{
+    width: 10%; 
+    height: 10%;
+}
+

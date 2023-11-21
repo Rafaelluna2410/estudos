@@ -1,95 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-
-}
-body{
-
-background-size: 100%;
-max-height: 600px;
-animation-delay: -5s;
-height: 100vh;
-margin: 0;
-
-} 
-
-.slider {
-  overflow: hidden;
-  width: 100%;
-  height: 100%s;
-  position: relative;
-
-}
-
-.slider .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  animation: slide 30s infinite;
-  z-index: -1; 
-}
-
-.slider .slide:nth-child(1) {
-  background-image: url('/imagens/slide/mala.jpg');
-  animation-delay: 0s;
-}
-
-.slider .slide:nth-child(2) {
-  background-image: url('/imagens/slide/ondas.jpg');
-  animation-delay: 10s;
-}
-  
-.slider .slide:nth-child(3) {
-  background-image: url('/imagens/slide/praia.jpg');
-  animation-delay: 20s;
-}
-@keyframes slide {
-  0%, 15%, 100% {
-    transform: translateX(0);
-    animation-timing-function: ease;
-  }
-  50% {
-    transform: translateX(-100%);
-    animation-timing-function: step-end;
-  }
-  80% {
-    transform: translateX(100%);
-    animation-timing-function: ease;
- 
-  }
-}
-header {
-    text-align: left;
-    background-color: rgba(18, 184, 129, 0.281);
-    display: flex;
-    justify-content: space-around;
-}
-  
-a{
-  color: black;
-}
-header a {
-  margin: 1%;
- 
-}
-nav{
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-  background-color: rgba(18, 184, 129, 0.281);
-}
-
-nav a{
-
-  margin: 0.75%;
-}
 main{
   display: flex;
   align-items: center;
@@ -101,127 +9,54 @@ main{
   max-height: 700px;
   
   }
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
+  .slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  
+  }
+  
+  .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    animation: slide 30s infinite;
+    z-index: -1; 
+  }
+  
+  .slider .slide:nth-child(1) {
+    background-image: url('/imagens/slide/mala.jpg');
+    animation-delay: 0s;
+  }
+  
+  .slider .slide:nth-child(2) {
+    background-image: url('/imagens/slide/ondas.jpg');
+    animation-delay: 10s;
+  }
     
+  .slider .slide:nth-child(3) {
+    background-image: url('/imagens/slide/praia.jpg');
+    animation-delay: 20s;
   }
-  .modal-content a{
-  
-  font-size: smaller;
-  
-  color: black;
-  text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .modal-content a:hover {
-    color: blue;
-    text-decoration: underline;
-  }
-   .modal-content {
-    box-sizing: border-box;
-    max-width: 15%;
-    max-height: 40%;
-    display: block;
-    background-color: rgba(0, 255, 179, 0.699);
-    margin: 10% auto;
-    padding: 1%;
-    border: 1px solid white;
-    line-height: 200%;
-  }
-  .modal_form{
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    line-height: 150%;
-  }
-  .modal_form input{
-  
-    max-width: 100%;
-    max-height: 100%;
-  
-  }
-  .close {
-    color: #ffffff;
-    float: right;
-    font-size: 200%;
-    font-weight: bold;
-  }
-  .login_input,
-  .reset_login {
-    width: 60%; 
-    box-sizing: border-box; 
-    margin: 5%;
-  }
-  .login_input{
-    font-size: larger;
-    background-color: white;
-    border: 1px solid white;
-    color: rgb(0, 3, 2);
-
-  }
-  .login_input:hover{
+  @keyframes slide {
+    0%, 15%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    50% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    80% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
    
-    background-color: rgba(0, 255, 179, 0.575);
+    }
   }
-  .reset_login{
-    background-color: white;
-    border-radius: 1% solid rgb(0,0,0);
-    
-  }
-  
-  .reset_login:hover{
-    border: 1px solid white;
-    background-color: rgba(0, 255, 179, 0.575);
-  }
-  
-  .form-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 5%;
-   
-  }
-  
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  #login_butao {
-    font-size: large;
-    color: rgb(0, 187, 134);
-    margin-top: 1.1%;
-    padding: 0.5%;
-    border-radius: 20%;
-    display: inline-block;
-  }
-  #login_butao:hover{
-  
-    background-color: rgba(0, 255, 179, 0.575);
-    color: white;
-   
-  }
-  
-  .a_header_nav{
-    font-size: large;
-    margin-top: 1.1%;
-    padding: 0.5%;
-    border-radius: 5%;
-    display: inline-block;
-  }
-  .a_header_nav:hover{
-  color: white;
-  }
-
   .cadastro {
     margin: 25%;
     width: 20%;
@@ -244,28 +79,6 @@ main{
   box-sizing: border-box;
   
 }  
-footer{
-font-size: large;
-color: black;
-padding: 3.5%;
-display: flex;
-justify-content: space-around;
-background-color: rgb(17, 218, 151);
-}
-footer a{
-  color: black;
-  list-style: none;
-  text-decoration: none;
-}
-.redes_sociais{
-  list-style: none;
-  padding: 0;
-  margin-right: 0px;
-  text-decoration: none;
-  margin-bottom: 10px; 
-}
-
-
 .cadastrar_input,
   .reset_cadastrar {
     width: 60%; 
@@ -297,8 +110,4 @@ footer a{
   .cadastro-buttons {
     display: flex;
     flex-direction: row;
-   /*  display: flex;
-    justify-content: space-between; */
-/*     margin: 5%; */
-   
   }
