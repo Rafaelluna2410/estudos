@@ -6,7 +6,6 @@
     text-decoration: none;
 
 }
-
 footer{
 font-size: large;
 color: black;
@@ -26,4 +25,11 @@ footer a{
   margin-right: 0px;
   text-decoration: none;
   margin-bottom: 10px; 
+}
+
+@media (max-width: 450px) {
+ .container{
+  margin: 5%;
+ }
+
 }

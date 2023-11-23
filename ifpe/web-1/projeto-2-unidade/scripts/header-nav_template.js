@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function loadHeaderAndNav() {
-    fetch('/html_templates/header-nav.html')
+    fetch('html_templates/header-nav.html')
         .then(response => response.text())
         .then(html => {
         

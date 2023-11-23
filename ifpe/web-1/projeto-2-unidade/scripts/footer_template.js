@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function loadFooter() {
 
-    fetch('/html_templates/footer.html')
+    fetch('html_templates/footer.html')
         .then(response => response.text())
         .then(html => {
             var container = document.getElementById('footerContainer');

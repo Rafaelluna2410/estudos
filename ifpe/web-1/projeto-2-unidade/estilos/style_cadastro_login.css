@@ -13,7 +13,7 @@ main{
     overflow: hidden;
     width: 100%;
     position: relative;
-  
+    background-color: rgba(18, 184, 129, 0.283);
   }
   
   .slider .slide {
@@ -63,7 +63,8 @@ main{
     max-width: 45%;
     padding: 0.5%;
     border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: rgba(18, 184, 129, 0.422);
   }
   .cadastro label,
 .cadastro input,

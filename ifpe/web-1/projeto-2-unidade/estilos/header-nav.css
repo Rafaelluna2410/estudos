@@ -1,8 +1,8 @@
 header {
-    text-align: left;
-    background-color: rgba(18, 184, 129, 0.281);
-    display: flex;
-    justify-content: space-around;
+  text-align: left;
+  background-color: rgba(18, 184, 129, 0.281);
+  display: flex;
+  justify-content: space-around;
 }
   
 a{
@@ -13,9 +13,9 @@ header a {
  
 }
 nav{
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
   background-color: rgba(18, 184, 129, 0.281);
 }
 
@@ -86,7 +86,7 @@ nav a{
     background-color: white;
     border: 1px solid white;
     color: rgb(0, 3, 2);
-    /* margin: 1%; */
+ 
   }
   .login_input:hover{
    
@@ -110,8 +110,7 @@ nav a{
     margin: 5%;
    
   }
-  
-  
+
   .close:hover,
   .close:focus {
     color: black;
@@ -144,3 +143,59 @@ nav a{
   .a_header_nav:hover{
   color: white;
   }
+
+
+@media (max-width: 450px) {
+  .modal-content {
+    max-width: 50%;
+  }
+
+  header, nav {
+    max-width: 100%;
+  }
+
+  .a_header_nav {
+    font-size: normal;
+    margin-top: 0;
+    margin: 0%;
+    border-radius: 0%;
+    display: inline-flex;
+  }
+  header {
+    text-align: center;
+    background-color: rgba(18, 184, 129, 0.281);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  header a {
+    display: block;
+    margin: 1%;
+  }
+
+  nav {
+    text-align: center;
+   /*  display: block; */
+  }
+
+  .nav-list {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .nav-list {
+  
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav-list a:hover {
+    color: white;
+  
+  }
+}

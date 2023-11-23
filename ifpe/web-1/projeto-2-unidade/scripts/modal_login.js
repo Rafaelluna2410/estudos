@@ -1,5 +1,4 @@
 
-
 document.getElementById('login_butao').addEventListener('click', function () {
   document.getElementById('loginModal').style.display = 'block';
 });
