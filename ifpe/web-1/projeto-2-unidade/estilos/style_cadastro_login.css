@@ -112,3 +112,23 @@ main{
     display: flex;
     flex-direction: row;
   }
+
+  @media (max-width: 450px) {
+    main{
+      height: 700px;
+      flex-direction: column;
+      max-height: none;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+      max-height: none;
+    
+    }
+    .cadastro {
+      margin: 25%;
+      width: 100%;
+      max-width: 70%;
+      padding: 4%;
+    }
+}

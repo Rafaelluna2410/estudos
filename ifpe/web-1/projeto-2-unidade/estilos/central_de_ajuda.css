@@ -128,3 +128,41 @@ display: inline-block;
     font-size: medium;
     line-height: 120%;
   }
+  @media (max-width: 450px) {
+    main{
+      display: block;
+      flex-direction: none;
+      gap: 0%;
+      padding-left: 3.5%;
+      padding-right: 3.5%; 
+      background-color: rgba(18, 184, 129, 0.281);
+      max-height: none;  
+      height: 500px;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+      max-height: none;
+      height: none;
+    
+    }
+    .form_contato{
+      line-height: 120%;
+   }
+  .fieldset_form{
+      display: flex;
+      padding: 10%;
+      flex-direction: column;
+      text-align: left;
+      line-height: 220%;
+      
+  }
+  .fieldset_form input{
+      display: block;
+      max-width: 80%;
+  }
+
+  #mensagem{
+    max-width: 80%;
+  }
+}
