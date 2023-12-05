@@ -1,0 +1,147 @@
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5%;
+        padding-left: 3.5%;
+        padding-right: 3.5%; 
+        background-color: rgba(18, 184, 129, 0.281);
+        height: 700px;
+    }   
+
+    .carregar {
+    animation: roda 1.4s linear infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 50px;
+    width: 50px;
+    }
+    
+    @keyframes roda {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+    .slider {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      background-color: rgba(18, 184, 129, 0.283);
+    }
+    .slider .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: slide 30s infinite;
+      z-index: -1; 
+    }
+    
+    .slider .slide:nth-child(1) {
+      background-image: url('/imagens/slide/mala.jpg');
+      animation-delay: 0s;
+    }
+    
+    .slider .slide:nth-child(2) {
+      background-image: url('/imagens/slide/ondas.jpg');
+      animation-delay: 10s;
+    }
+      
+    .slider .slide:nth-child(3) {
+      background-image: url('/imagens/slide/praia.jpg');
+      animation-delay: 20s;
+    }
+    @keyframes slide {
+      0%, 15%, 100% {
+        transform: translateX(0);
+        animation-timing-function: ease;
+      }
+      50% {
+        transform: translateX(-100%);
+        animation-timing-function: step-end;
+      }
+      80% {
+        transform: translateX(100%);
+        animation-timing-function: ease;
+     
+      }
+    }
+    .cadastro {
+      margin: 25%;
+      width: 20%;
+      max-width: 45%;
+      padding: 0.5%;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      background-color: rgba(18, 184, 129, 0.422);
+    }
+    .cadastro label,
+  .cadastro input,
+  .cadastro select {
+    display: block;
+    margin-bottom: 10px;
+    
+  }
+  .form_cadastro input{
+  
+    padding: 5px 10px;
+  
+    box-sizing: border-box;
+    
+  }  
+  .cadastrar_input,
+    .reset_cadastrar {
+      width: 60%; 
+      box-sizing: border-box; 
+      margin: 5%;
+    }
+    .cadastrar_input{
+      font-size: larger;
+      background-color: white;
+      border: 1px solid white;
+      color: rgb(0, 3, 2);
+  
+    }
+    .cadastrar_input:hover{
+     
+      background-color: rgba(0, 255, 179, 0.575);
+    }
+    .reset_cadastrar{
+      background-color: white;
+      border-radius: 1% solid rgb(0,0,0);
+      
+    }
+    
+    .reset_cadastrar:hover{
+      border: 1px solid white;
+      background-color: rgba(0, 255, 179, 0.575);
+    }
+    
+    .cadastro-buttons {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    @media (max-width: 450px) {
+      main{
+        height: 700px;
+        flex-direction: column;
+        max-height: none;
+      }
+      body{
+        width: 100%;
+        height: 100%;
+        max-height: none;
+      
+      }
+      .cadastro {
+        margin: 25%;
+        width: 100%;
+        max-width: 70%;
+        padding: 4%;
+      }
+  }
