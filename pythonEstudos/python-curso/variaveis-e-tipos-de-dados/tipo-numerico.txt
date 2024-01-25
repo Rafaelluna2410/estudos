@@ -1,0 +1,22 @@
+1 - O limite para o valor numérico é apenas o tamanho da memória do pc, diferente de linguagens como java, que é 2**63
+
+2 - forma pythonica de usar resto da divisão:
+    num = 43
+    num /=2
+    num
+    result:  21.5
+
+    se fizer:
+    num = 43
+    num //=2
+    num
+    result: 21
+
+3 - usar a função type para identificar o tipo do numero
+    type(43)
+    result: int
+
+    util para valores grandes
+    num = 1_000_000
+    type(num)
+    result = int

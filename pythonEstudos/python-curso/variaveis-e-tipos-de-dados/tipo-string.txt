@@ -1,0 +1,42 @@
+"""
+aspas simples,
+aspas duplas,
+aspas simples triplas,
+aspas duplas triplas.
+
+nome =  'Angelina \nJolie'
+print(nome)
+print(type(nome))
+
+nome = "Angelina \" Jolie"
+print(nome)
+print(type(nome))
+
+print(nome.upper())
+
+print(nome.lower())
+
+print(nome.split()) #Transforma em uma lista de strings e separa as palavras
+result: ['Geek', 'University']
+
+Se fizer:
+print(nome.split()[0])
+result: ['Geek']
+"""
+
+# Slice string
+# [ 0 ,  1 ,  2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14]
+# ['G', 'e', 'e', 'k', ' ', 'U', 'n', 'i', 'v', 'e', 'r', 's', 'i', 't', 'y']
+nome = 'Geek university'
+print(nome[0:4])
+result: 'Geek' # O 0:4 impreme de 0 até antes do 4, se quisesse imprimir o espaço em branco deve-se colocar 0:5
+
+print(nome[5:15]) #imprime do U até a última letra
+result: 'University'
+
+
+[::-1] -> Começa do primero elemento, e vai até o último elemento e inverte
+print(nome[::-1])
+result: ytisrevinU keeG
+
+
