@@ -102,10 +102,21 @@ curso = ' '.join(lista_7) Estou dizendo para colocar espaço entre os elementos,
 Iterando sobre listas
 
 Exemplo 1 - utilizando for
+aqui ele percorre os elementos diretament sem ser pelo indice
 for elemento in lista_a:
     print(elemento)
     soma += elemento
 print(soma)
+
+lista = [1, 2, 3]
+soma = 0
+
+for indice, valor in enumerate(lista):
+    print(f"Índice: {indice}, Valor: {valor}")
+    soma += valor
+
+print(f"Soma: {soma}")
+
 
 Exemplo 2 = Utilizando while
 
@@ -130,19 +141,15 @@ num3 = 3
 
 numeros = [num1, num2, num3]
 
-
-
 # Fazemos o acesso aos elementos de forma indexada:
 
 cores = ['verde', 'amarelo', 'vermelho']
 print(cores[0])
 
-
 # Fazemos o acesso aos elementos de forma indexada inversa:
 # é como um circulo onde o final está ligado ao inicio da lista
 cores[-1] # vermelho
 cores[-2] # amarelo
-
 
 # Gerar indice em um for:
 Cria chave e valor
@@ -211,8 +218,6 @@ print(nomes)
 nomes.reverse()
 print(nomes)
 
-
-
 #############################################
 # Soma, valor maximo, valor minimo, tamanho #
 # Só para int e floats                      #
@@ -223,7 +228,6 @@ print(sum(lista))
 print(max(lista))
 print(min(lista))
 print(len(lista))
-
 
 ##############################
 # Transforma lista em tupla  #
@@ -253,7 +257,6 @@ print(num4)
 
 lista = [1, 2, 3]
 nova = lista.copy()  # Elas são independentes, se uma for modificada não afeta a outra 'Deep copy'
-
 
 lista = [1, 2, 3]
 nova = lista # Elas são dependentes, se uma for modificada a outra é afetada (Shallow copy)
