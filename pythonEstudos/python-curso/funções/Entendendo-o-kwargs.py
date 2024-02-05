@@ -25,8 +25,6 @@ def cores_favorita(**kwargs):
 
 cores_favorita(marcos='verde',julia='amarelo', fernando='azul')
 
-
-
 # Sequência de declaração correta dos parâmetros
 
 def minha_funcao(idade, nome, *args, solteiro=False, **kwargs):
