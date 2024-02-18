@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 def habitantes():
 
     caracteres_habitantes = []
@@ -34,14 +34,3 @@ def habitantes():
     #return f'Habitante {caracteres_habitantes[0]["nome"]}: {caracteres_habitantes[0]},\n  Habitante {caracteres_habitantes[1]["nome"]}: {caracteres_habitantes[1]}'
     return f"Media olhos castanho e cabelo preto: {count_idade/count},\n Maior idade: {maior_idade}, Loira >= 18 e <= 35: {quantidade_loiro_olhos_azuis}"
 print(habitantes())
-=======
-def ler_dados():
-    caracterisiticas_habitantes = []
-    for i in range(5):
-
-
-
-    return
-
-
->>>>>>> 7843dd9786e664af6d4120706cf94ac72787a328
