@@ -3,6 +3,10 @@ import subprocess
 from pathlib import Path
 import psutil
 
+# senhas default conforme a loja
+loja_a = 'senha123'
+loja_b = 'senhaabc'
+loja_c = 'senhafgh'
 
 # Procura o anydesk na tabela de processos do windows 
 def find_anydesk(nome_processo='Anydesk'):
@@ -29,6 +33,9 @@ def find_anydesk_local_machine():
 #        print("Standard error output:", e.stderr)
  
 
+def test_event():
+    print('teste')
+
 def install_full():
     home_dir = str(Path.home())
     site = "https://download.anydesk.com/AnyDesk.exe"
@@ -54,9 +61,10 @@ def install_full():
     print("Instalação e configuração do AnyDesk concluídas.") 
 
 # busca se há o anydesk e dependendo instala
-try:
-    find_anydesk_local_machine()
-    if find_anydesk():
-        print("Anydesk já está instalado e aberto")
-except psutil.NoSuchProcess:
-    install_full()
+def install_anydesk():
+    try:
+        find_anydesk_local_machine()
+        if find_anydesk():
+            print("Anydesk já está instalado e aberto")
+    except psutil.NoSuchProcess:
+        install_full()
